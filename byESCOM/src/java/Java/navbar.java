@@ -55,7 +55,7 @@ public class navbar {
                 + "<a class='button is-primary'>"
                 + "<strong>Registrarse</strong>"
                 + "</a>"
-                + "<a class='button is-light'>"
+                + "<a href='./login' class='button is-light'>"
                 + "Iniciar Sesion"
                 + "</a>"
                 + "</div>"

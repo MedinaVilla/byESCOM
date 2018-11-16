@@ -22,19 +22,13 @@
     </head>
     <body>
         <!-- Constructor que imprime navbar -->
+        <div>
         <%
             navbar navbar = new navbar();
             out.println(navbar.showNavbar());
         %>
-        Hola, soy la Landing Page un gusto compadre <br>
-        Aqui va el contenido de la pagina <br>
-        El de arriba es una navbar <br>
-        El de abajo es un footer <br>
-        Siempre se van a poner en todos los modulos con simple import <br>
-        No paro de escribir para tener algo de contenido.
-        <i class="fab fa-amazon-pay"></i>
-        <i class="fab fa-accessible-icon"></i>
-        <i class="fas fa-user"></i>
+        Hola gente de youtube
+      </div>
     </body>
     <!-- Constructor que imprime navbar -->
     <%
