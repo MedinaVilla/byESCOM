@@ -12,8 +12,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"/>
         <link rel="stylesheet" href="./css/bulma.css" type="text/css">
-        <link rel="stylesheet" href="./css/bulma.css.map" type="text/css">
-        <link rel="stylesheet" href="./css/bulma.min.css" type="text/css">
         <link rel="stylesheet" href="./fonts/css/all.css"> 
         <link rel="stylesheet" href="./css/login.css">
         <title>Login</title>
@@ -57,7 +55,7 @@
                                 </form>
                             </div>
                             <p class="has-text-grey">
-                                <a href="../">No tienes cuenta? Regístrate</a> &nbsp;&nbsp;
+                                <a href="./register">No tienes cuenta? Regístrate</a> &nbsp;&nbsp;
                             </p>
                         </div>
                     </div>

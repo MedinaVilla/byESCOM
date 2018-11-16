@@ -14,8 +14,6 @@
         <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"/>
 
         <link rel="stylesheet" href="./css/bulma.css" type="text/css"/>
-        <link rel="stylesheet" href="./css/bulma.css.map" type="text/css"/>
-        <link rel="stylesheet" href="./css/bulma.min.css" type="text/css"/>
         <link rel="stylesheet" href="./fonts/css/all.css"/> 
 
         <title>Bievenido</title>
@@ -23,12 +21,12 @@
     <body>
         <!-- Constructor que imprime navbar -->
         <div>
-        <%
-            navbar navbar = new navbar();
-            out.println(navbar.showNavbar());
-        %>
-        Hola gente de youtube
-      </div>
+            <%
+                navbar navbar = new navbar();
+                out.println(navbar.showNavbar());
+            %>
+            Hola gente de youtube. Este es el index
+        </div>
     </body>
     <!-- Constructor que imprime navbar -->
     <%
