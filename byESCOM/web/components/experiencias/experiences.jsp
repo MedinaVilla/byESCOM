@@ -36,9 +36,10 @@
                     </div>
                 </div>
         </section>
-        <section class="container">
-            <iframe src="./showExperiences" width="100%" scrolling="no"></iframe>
-          <%//Checar login full hd %>
+        <section class="hero is-fullheight">
+            <iframe src="./showExperiences" class="hero-body" scrolling="no"></iframe>
+            
+      
         </section>
         <%
             footer footer = new footer();
