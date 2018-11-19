@@ -27,7 +27,19 @@
 
             }
         %>
-        <h1>Hello World!</h1>
+        <section class="hero is-primary">
+                <div class="hero-body">
+                    <div class="container">
+                        <h1 class="title">
+                            Catalogo de Experiencias
+                        </h1>
+                    </div>
+                </div>
+        </section>
+        <section class="container">
+            <iframe src="./showExperiences" width="100%" scrolling="no"></iframe>
+          <%//Checar login full hd %>
+        </section>
         <%
             footer footer = new footer();
             out.println(footer.showFooter());
