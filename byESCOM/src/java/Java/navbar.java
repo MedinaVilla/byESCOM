@@ -6,11 +6,48 @@ package Java;
  */
 public class navbar {
 
-    public String showNavbar() {
+    public String showNavbar(String nombre, String tipoUsuario) {
 
         String navbar;
-        //Se puede declarar otra variable en donde tenga funciones extras para moderador o algun otro usuario
+        String moderador = "";
+        String usuario = "";
 
+        if (!"".equals(nombre)) {
+            usuario = "<div class='navbar-end'>"
+                    + "<div class='navbar-item has-dropdown is-hoverable'>"
+                    + "<a class='navbar-link'>"
+                    + "@" + nombre
+                    + "</a>"
+                    + "<div class='navbar-dropdown'>"
+                    + "<a class='navbar-item'>"
+                    + "Perfil"
+                    + "</a>"
+                    + "<a href='./cerrarSesion' class='navbar-item'>"
+                    + "Cerrar sesion"
+                    + "</a>"
+                    + "</div>"
+                    + "</div>"
+                    + "</div>";
+        } else {
+            usuario = "<div class='navbar-end'>"
+                    + "<div class='navbar-item'>"
+                    + "<div class='buttons'>"
+                    + "<a href='./register' class='button is-primary'>"
+                    + "<strong>Registrarse</strong>"
+                    + "</a>"
+                    + "<a href='./login' class='button is-light'>"
+                    + "Iniciar Sesion"
+                    + "</a>"
+                    + "</div>"
+                    + "</div>"
+                    + "</div>"
+                    + "</div>";
+        }
+        if (tipoUsuario.equals("2")) {
+            moderador = "<a class='navbar-item'>"
+                    + "Moderador"
+                    + "</a>";
+        }
         navbar = "<nav class='navbar' role='navigation' aria-label='main navigation'>"
                 + "<div class='navbar-brand'>"
                 + "<a class='navbar-item' href='./'>"
@@ -24,39 +61,44 @@ public class navbar {
                 + "</div>"
                 + "<div id='navbarBasicExample' class='navbar-menu'>"
                 + "<div class='navbar-start'>"
-                + "<a class='navbar-item'>"
+                + "<a href='./' class='navbar-item'>"
                 + "Inicio"
                 + "</a>"
                 + "<a class='navbar-item'>"
-                + "Carreras"
+                + "Materias"
                 + "</a>"
                 + "<div class='navbar-item has-dropdown is-hoverable'>"
                 + "<a class='navbar-link'>"
-                + "Materias"
+                + "Experiencias"
                 + "</a>"
                 + "<div class='navbar-dropdown'>"
                 + "<a class='navbar-item'>"
-                + "Visualizar comentarios"
+                + "Catalogo de experiencias"
                 + "</a>"
                 + "<a class='navbar-item'>"
-                + "Realiza una comentario"
+                + "Envio de experiencias"
                 + "</a>"
                 + "</div>"
                 + "</div>"
-                + "</div>"
-                + "<div class='navbar-end'>"
-                + "<div class='navbar-item'>"
-                + "<div class='buttons'>"
-                + "<a href='./register' class='button is-primary'>"
-                + "<strong>Registrarse</strong>"
+                + "<div class='navbar-item has-dropdown is-hoverable'>"
+                + "<a class='navbar-link'>"
+                + "ESCOM"
                 + "</a>"
-                + "<a href='./login' class='button is-light'>"
-                + "Iniciar Sesion"
+                + "<div class='navbar-dropdown'>"
+                + "<a class='navbar-item'>"
+                + "Informacion de ESCOM"
+                + "</a>"
+                + "<a class='navbar-item'>"
+                + "Mapa de ESCOM"
                 + "</a>"
                 + "</div>"
                 + "</div>"
+                + "<a class='navbar-item'>"
+                + "Ayuda"
+                + "</a>"
+                + moderador
                 + "</div>"
-                + "</div>"
+                + usuario
                 + "</nav>";
         return navbar;
     }

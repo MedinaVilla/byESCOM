@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.io.*,java.sql.*,Java.*" %>
+<%HttpSession sesion = request.getSession();%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,7 +19,13 @@
     </head>
     <%
         navbar navbar = new navbar();
-        out.println(navbar.showNavbar());
+        try {
+            out.println(navbar.showNavbar(sesion.getAttribute("nombreUsuario").toString(), sesion.getAttribute("tipoUsuario").toString()));
+            response.sendRedirect("./indexUser");
+        } catch (Exception e) {
+            out.println(navbar.showNavbar("", ""));
+
+        }
     %>
     <body>
         <div>

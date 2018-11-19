@@ -5,7 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="java.io.*,java.sql.*,Java.*" %>
+<%@page import="java.io.*,java.sql.*,Java.*"  %>
+<%HttpSession sesion = request.getSession();%>
 
 <!DOCTYPE html>
 <html>
@@ -23,9 +24,16 @@
         <div>
             <%
                 navbar navbar = new navbar();
-                out.println(navbar.showNavbar());
+                try {
+                    out.println(navbar.showNavbar(sesion.getAttribute("nombreUsuario").toString(), sesion.getAttribute("tipoUsuario").toString()));
+                    response.sendRedirect("./indexUser");
+                } catch (Exception e) {
+                    out.println(navbar.showNavbar("", ""));
+
+                }
             %>
             Hola gente de youtube. Este es el index
+
         </div>
     </body>
     <!-- Constructor que imprime navbar -->
