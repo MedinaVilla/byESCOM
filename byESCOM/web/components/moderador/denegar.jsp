@@ -8,13 +8,13 @@
 <%@page contentType="text/html" import="Java.*" pageEncoding="UTF-8"%>
 <%
     int idExperiencia = Integer.parseInt(request.getParameter("idExpR"));
-    try{
-    experiencia exp = new experiencia();
-    out.println(idExperiencia);
-     exp.denegarExperiencia(idExperiencia);
-     response.sendRedirect("./revisionExperiencias");
-    }catch(SQLException e){
-    out.println(e);
+    try {
+        experiencia exp = new experiencia();
+        out.println(idExperiencia);
+        exp.denegarExperiencia(idExperiencia);
+        response.sendRedirect("./revisionExperiencias");
+    } catch (SQLException e) {
+        out.println(e);
     }
 %>
 <!DOCTYPE html>

@@ -18,7 +18,9 @@ public class usuario {
     private database db = new database();
     PreparedStatement ps = null;
 
-    public usuario(){}
+    public usuario() {
+    }
+
     public usuario(String boleta, String nombre, String password) {
         this.boleta = boleta;
         this.nombre = nombre;
@@ -31,10 +33,10 @@ public class usuario {
         PreparedStatement ps;
 
         String insertUsuario = ("insert into usuario(boleta, nombre, contrasenia, idTipoUsuario) values("
-                + "?, " 
                 + "?, "
-                + "?, " 
-                + "?" 
+                + "?, "
+                + "?, "
+                + "?"
                 + ");");
 
         ps = db.getC().prepareStatement(insertUsuario);
@@ -61,14 +63,14 @@ public class usuario {
         psIniciarSesion.setString(2, password);
         rsIniciarSesion = psIniciarSesion.executeQuery();
 
-        if(rsIniciarSesion.next()) {
+        if (rsIniciarSesion.next()) {
             userExist = true;
         }
         return userExist;
     }
 
     public ResultSet getUsuarioPorID(String idAlumno) throws SQLException {
-        String query = "select * from usuario "+ "where nombreUsuario = ?;";
+        String query = "select * from usuario " + "where nombreUsuario = ?;";
         db.conectar();
         PreparedStatement psQueryPerfil = db.getC().prepareStatement(query);
         psQueryPerfil.setString(1, idAlumno);
@@ -79,7 +81,7 @@ public class usuario {
         return boleta;
     }
 
-     public String getNombreUsuario() {
+    public String getNombreUsuario() {
         return this.nombre;
     }
 

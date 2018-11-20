@@ -11,32 +11,35 @@
     database db = new database();
     String nombreUsu = request.getParameter("nombreUsuario");
     String contrasenia = request.getParameter("password");
-    
-    db.conectar();
-    usuario usuario = new usuario();
-    
-    if (usuario.iniciarSesion(nombreUsu, contrasenia)) {
-        HttpSession sesion = request.getSession();
-        sesion.setAttribute("identificador", nombreUsu);
-        rs = usuario.getUsuarioPorID(nombreUsu);
-        while (rs.next()) {
-            sesion.setAttribute("idUsuario", rs.getString("usuario.idUsuario"));
-            sesion.setAttribute("nombreUsuario", rs.getString("usuario.nombreUsuario"));
-            sesion.setAttribute("tipoUsuario", rs.getString("usuario.idTipoUsuario"));
+    try {
+        db.conectar();
+        usuario usuario = new usuario();
+
+        if (usuario.iniciarSesion(nombreUsu, contrasenia)) {
+            HttpSession sesion = request.getSession();
+            sesion.setAttribute("identificador", nombreUsu);
+            rs = usuario.getUsuarioPorID(nombreUsu);
+            while (rs.next()) {
+                sesion.setAttribute("idUsuario", rs.getString("usuario.idUsuario"));
+                sesion.setAttribute("nombreUsuario", rs.getString("usuario.nombreUsuario"));
+                sesion.setAttribute("tipoUsuario", rs.getString("usuario.idTipoUsuario"));
+            }
+            response.sendRedirect("./indexUser");
+        } else {
+            response.sendRedirect("./login?errLogin=EmptyInput573");
         }
-        response.sendRedirect("./indexUser");
-    } else {
-        response.sendRedirect("./login?errLogin=EmptyInput573");
+    } catch (Exception e) {
+        response.sendRedirect("./login");
     }
-    
+
 %>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Loading</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+
     </body>
 </html>

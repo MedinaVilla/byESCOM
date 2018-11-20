@@ -68,9 +68,6 @@
                                     <button class="button is-primary  is-large is-fullwidth">Login</button>
                                 </form>
                             </div>
-                            <p class="has-text-grey">
-                                <a href="./register">No tienes cuenta? Regístrate</a> &nbsp;&nbsp;
-                            </p>
                         </div>
                     </div>
                 </div>

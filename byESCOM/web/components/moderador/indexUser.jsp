@@ -29,7 +29,14 @@
                     response.sendRedirect("./login");
                 }
             %>
-            <h3>Bienvenido Moderador </h3> <%out.print(sesion.getAttribute("nombreUsuario").toString());%>
+            <section class="hero is-primary">
+                <div class="hero-body">
+                    <div class="container">
+                        <h1 class="title">
+                            Bienvenido <%out.print(sesion.getAttribute("nombreUsuario").toString());%>
+                    </div>
+                </div>
+            </section> 
         </div>
     </body>
     <%

@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="./fonts/css/all.css"> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="./js/reporte.js"></script>
-        <title>Errores</title>
+        <title>Revision de Errores</title>
     </head>
     <body>
         <%
@@ -51,11 +51,11 @@
                     </aside>
                 </div>
                 <div class="column is-three-quarters">
-                    <span id="submodulo" class="tag is-primary is-primary">Seleccione una experiencia</span>
+                    <span id="submodulo" class="tag is-primary is-primary">Seleccione un reporte</span>
                     <div class="box">
-                        <p id="explicacion">Explicacion: Seleccione una experiencia</p>
-                        <p id="metodo">Metodo en el que se encontro el error: Seleccione una experiencia</p>
-                        <p id="fechaEnvio"> Fecha: Seleccione una experiencia </p>
+                        <p id="explicacion">Explicacion: Seleccione un reporte</p>
+                        <p id="metodo">Metodo en el que se encontro el error: Seleccione un reporte</p>
+                        <p id="fechaEnvio"> Fecha: Seleccione un reporte </p>
                         <br/>
 
                         <nav class="level">

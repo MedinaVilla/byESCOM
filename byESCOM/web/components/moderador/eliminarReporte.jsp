@@ -8,14 +8,14 @@
 <%@page contentType="text/html" import="Java.*" pageEncoding="UTF-8"%>
 
 <%
-    int idReporte= Integer.parseInt(request.getParameter("idReporteE"));
-    try{
-    errores reporte = new errores();
-    out.println(idReporte);
-    reporte.deleteReporte(idReporte);
-     response.sendRedirect("./revisionErrores");
-    }catch(SQLException e){
-    out.println(e);
+    int idReporte = Integer.parseInt(request.getParameter("idReporteE"));
+    try {
+        errores reporte = new errores();
+        out.println(idReporte);
+        reporte.deleteReporte(idReporte);
+        response.sendRedirect("./revisionErrores");
+    } catch (SQLException e) {
+        out.println(e);
     }
 %>
 <!DOCTYPE html>

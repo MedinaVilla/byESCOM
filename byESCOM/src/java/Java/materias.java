@@ -21,7 +21,7 @@ public class materias {
         String query = ("select m.idMateria, m.titulo, m.descripcion, t.tipoMateria "
                 + "from materia m "
                 + "inner join tipoMateria t "
-                + "on m.idTipoMateria = t.idTipoMateria order by t.tipoMateria;");
+                + "on m.idTipoMateria = t.idTipoMateria order by t.tipoMateria, m.titulo;");
 
         rs = db.consulta(query);
 
