@@ -29,6 +29,14 @@
         <jsp-file>/components/cerrarSesion.jsp</jsp-file>
     </servlet>
     <servlet>
+        <servlet-name>experiences</servlet-name>
+        <jsp-file>/components/experiencias/experiences.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>showExperiences</servlet-name>
+        <jsp-file>/components/experiencias/showExperiences.jsp</jsp-file>
+    </servlet>
+    <servlet>
         <servlet-name>materias</servlet-name>
         <jsp-file>/components/materia/materia.jsp</jsp-file>
     </servlet>
@@ -71,6 +79,14 @@
     <servlet-mapping>
         <servlet-name>cerrarSesion</servlet-name>
         <url-pattern>/cerrarSesion</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>experiences</servlet-name>
+        <url-pattern>/experiences</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>showExperiences</servlet-name>
+        <url-pattern>/showExperiences</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>materias</servlet-name>
