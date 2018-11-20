@@ -9,19 +9,19 @@
 <%
     ResultSet rs = null;
     database db = new database();
-    String boleta = request.getParameter("boleta");
+    String nombreUsu = request.getParameter("nombreUsuario");
     String contrasenia = request.getParameter("password");
     
     db.conectar();
     usuario usuario = new usuario();
     
-    if (usuario.iniciarSesion(boleta, contrasenia)) {
+    if (usuario.iniciarSesion(nombreUsu, contrasenia)) {
         HttpSession sesion = request.getSession();
-        sesion.setAttribute("identificador", boleta);
-        rs = usuario.getUsuarioPorID(boleta);
+        sesion.setAttribute("identificador", nombreUsu);
+        rs = usuario.getUsuarioPorID(nombreUsu);
         while (rs.next()) {
             sesion.setAttribute("idUsuario", rs.getString("usuario.idUsuario"));
-            sesion.setAttribute("nombreUsuario", rs.getString("usuario.nombre"));
+            sesion.setAttribute("nombreUsuario", rs.getString("usuario.nombreUsuario"));
             sesion.setAttribute("tipoUsuario", rs.getString("usuario.idTipoUsuario"));
         }
         response.sendRedirect("./indexUser");

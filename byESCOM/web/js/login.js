@@ -1,17 +1,17 @@
 function validarLogin() {
-    let boleta = document.forms["login"]["boleta"].value;
+    let nombreUsu = document.forms["login"]["nombreUsuario"].value;
     let password = document.forms["login"]["password"].value;
-    if (!boleta) {
-        document.getElementById("boletaErr").innerHTML = "Ingrese su boleta";
+    if (!nombreUsu) {
+        document.getElementById("nombreUsuErr").innerHTML = "Ingrese su nombre de usuario";
     } else {
-        document.getElementById("boletaErr").innerHTML = "";
+        document.getElementById("nombreUsuErr").innerHTML = "";
     }
     if (!password) {
         document.getElementById("passwordErr").innerHTML = "Ingrese su password";
     } else {
         document.getElementById("passwordErr").innerHTML = "";
     }
-    if ((!boleta) || (!password)) {
+    if ((!nombreUsu) || (!password)) {
         return false;
     }
 }

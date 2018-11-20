@@ -48,16 +48,16 @@ public class usuario {
         db.cierraConexion();
     }
 
-    public boolean iniciarSesion(String boleta, String password) throws SQLException {
+    public boolean iniciarSesion(String nombreUsuario, String password) throws SQLException {
         ResultSet rsIniciarSesion;
         boolean userExist = false;
         db.conectar();
 
-        String queryBuscar = ("select * from usuario where boleta = ? and contrasenia = ?;");
+        String queryBuscar = ("select * from usuario where nombreUsuario = ? and contrasenia = ?;");
 
         PreparedStatement psIniciarSesion = db.getC().prepareStatement(queryBuscar);
 
-        psIniciarSesion.setString(1, boleta);
+        psIniciarSesion.setString(1, nombreUsuario);
         psIniciarSesion.setString(2, password);
         rsIniciarSesion = psIniciarSesion.executeQuery();
 
@@ -68,7 +68,7 @@ public class usuario {
     }
 
     public ResultSet getUsuarioPorID(String idAlumno) throws SQLException {
-        String query = "select * from usuario "+ "where boleta = ?;";
+        String query = "select * from usuario "+ "where nombreUsuario = ?;";
         db.conectar();
         PreparedStatement psQueryPerfil = db.getC().prepareStatement(query);
         psQueryPerfil.setString(1, idAlumno);

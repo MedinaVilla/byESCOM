@@ -41,7 +41,7 @@ public class navbar {
                     + "</div>"
                     + "</div>";
         }
-        if (tipoUsuario.equals("2")) {
+        if (tipoUsuario.equals("1")) {
             moderador = "<div class='navbar-item has-dropdown is-hoverable'>"
                     + "<a class='navbar-link'>"
                     + "Moderador"

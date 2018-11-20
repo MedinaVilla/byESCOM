@@ -52,8 +52,8 @@
                                 <form name="login" action="./loguearse"  onsubmit="return validarLogin()">
                                     <div class="field">
                                         <div class="control">
-                                            <input name="boleta" class="input is-large" type="text" placeholder="Tu boleta" autofocus="">
-                                            <p id="boletaErr" class="help is-danger"> </p>
+                                            <input name="nombreUsuario" class="input is-large" type="text" placeholder="Nombre de Usuario" autofocus="">
+                                            <p id="nombreUsuErr" class="help is-danger"> </p>
                                         </div>
                                     </div>
 

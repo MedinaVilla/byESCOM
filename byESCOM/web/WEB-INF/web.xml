@@ -80,7 +80,7 @@
         <servlet-name>cerrarSesion</servlet-name>
         <url-pattern>/cerrarSesion</url-pattern>
     </servlet-mapping>
-     <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>experiences</servlet-name>
         <url-pattern>/experiences</url-pattern>
     </servlet-mapping>
@@ -104,7 +104,7 @@
         <servlet-name>denegarExperiencia</servlet-name>
         <url-pattern>/denegarExperiencia</url-pattern>
     </servlet-mapping>
-       <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>aceptarExperiencia</servlet-name>
         <url-pattern>/aceptarExperiencia</url-pattern>
     </servlet-mapping>

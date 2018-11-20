@@ -19,7 +19,7 @@ public class materias {
     public ResultSet getMaterias() throws SQLException {
         db.conectar();
         String query = ("select m.idMateria, m.titulo, m.descripcion, t.tipoMateria "
-                + "from materias m "
+                + "from materia m "
                 + "inner join tipoMateria t "
                 + "on m.idTipoMateria = t.idTipoMateria order by t.tipoMateria;");
 
@@ -31,7 +31,7 @@ public class materias {
     public ResultSet getMateriaporTitulo(String titulo) throws SQLException {
         db.conectar();
 
-        String query = ("select * from materias where titulo=?;");
+        String query = ("select * from materia where titulo=?;");
 
         ps = db.getC().prepareStatement(query);
 
