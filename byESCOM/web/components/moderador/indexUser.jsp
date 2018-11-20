@@ -29,7 +29,7 @@
                     response.sendRedirect("./login");
                 }
             %>
-            <h3>Hola hermano escomiano xdxd </h3>
+            <h3>Bienvenido Moderador </h3> <%out.print(sesion.getAttribute("nombreUsuario").toString());%>
         </div>
     </body>
     <%

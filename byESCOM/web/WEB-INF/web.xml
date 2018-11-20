@@ -16,17 +16,37 @@
         <servlet-name>registro</servlet-name>
         <jsp-file>/components/registro.jsp</jsp-file>
     </servlet>
-     <servlet>
+    <servlet>
         <servlet-name>loguearse</servlet-name>
         <jsp-file>/components/loguearse.jsp</jsp-file>
     </servlet>
     <servlet>
         <servlet-name>indexUser</servlet-name>
-        <jsp-file>/components/indexUser.jsp</jsp-file>
+        <jsp-file>/components/moderador/indexUser.jsp</jsp-file>
     </servlet>
-     <servlet>
+    <servlet>
         <servlet-name>cerrarSesion</servlet-name>
         <jsp-file>/components/cerrarSesion.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>materias</servlet-name>
+        <jsp-file>/components/materia/materia.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>reportError</servlet-name>
+        <jsp-file>/components/reportError.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>revisionExperiencias</servlet-name>
+        <jsp-file>/components/moderador/revisionExperiencias.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>denegarExperiencia</servlet-name>
+        <jsp-file>/components/moderador/denegar.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>aceptarExperiencia</servlet-name>
+        <jsp-file>/components/moderador/aceptar.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
         <servlet-name>login</servlet-name>
@@ -40,18 +60,38 @@
         <servlet-name>registro</servlet-name>
         <url-pattern>/registro</url-pattern>
     </servlet-mapping>
-     <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>loguearse</servlet-name>
         <url-pattern>/loguearse</url-pattern>
     </servlet-mapping>
-        <servlet-mapping>
-            <servlet-name>indexUser</servlet-name>
-            <url-pattern>/indexUser</url-pattern>
-        </servlet-mapping>
-                <servlet-mapping>
-            <servlet-name>cerrarSesion</servlet-name>
-            <url-pattern>/cerrarSesion</url-pattern>
-        </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>indexUser</servlet-name>
+        <url-pattern>/indexUser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>cerrarSesion</servlet-name>
+        <url-pattern>/cerrarSesion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>materias</servlet-name>
+        <url-pattern>/materias</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>reportError</servlet-name>
+        <url-pattern>/reportarError</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>revisionExperiencias</servlet-name>
+        <url-pattern>/revisionExperiencias</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>denegarExperiencia</servlet-name>
+        <url-pattern>/denegarExperiencia</url-pattern>
+    </servlet-mapping>
+       <servlet-mapping>
+        <servlet-name>aceptarExperiencia</servlet-name>
+        <url-pattern>/aceptarExperiencia</url-pattern>
+    </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>

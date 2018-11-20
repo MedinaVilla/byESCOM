@@ -1,0 +1,83 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Java;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+/**
+ *
+ * @author MedinaVilla
+ */
+public class experiencia {
+
+    String idExperiencia;
+    Statement s = null;
+    ResultSet rs = null;
+    private PreparedStatement ps = null;
+    private final database db = new database();
+
+    public ResultSet getExperienciasEnRevision() throws SQLException {
+        db.conectar();
+        String query = ("select e.idExperiencia, e.nombreAlumno,e.contenido,e.fechaEnvio,t.tipoExperiencia "
+                + "from experiencia e inner join tipo_experiencia t on e.tipoExperiencia= t.idTipoExperiencia where e.estado=2;");
+        rs = db.consulta(query);
+        return rs;
+    }
+
+    public String imprimirNombreAlumnoExperiencia(String idExperiencia, String nombreAlumno, String contenido, String fechaEnvio, String tipoExperiencia) {
+        db.conectar();
+
+        String alumno;
+        alumno = "<ul class='menu-list'>"
+                + "<li><a onClick='showExperienciaDetails" + "(" + '"' + idExperiencia + '"' + "," + '"' + nombreAlumno + '"' + "," + '"' + contenido + '"' + "," + '"' + fechaEnvio + '"' + "," + '"' + tipoExperiencia + '"' + ")'>" + nombreAlumno + "</a></li>"
+                + "</ul>";
+
+        return alumno;
+
+    }
+
+    public String imprimirBotonesControl() {
+        db.conectar();
+        String botones;
+        botones = "<nav class=\"level\">"
+                + "<div class=\"level-left\"></div>\n"
+                + "<div class=\"level-right\">\n"
+                + "<p class=\"level-item\"><a class=\"button is-danger\">Rechazar</a></p>\n"
+                + "<p class=\"level-item\"><a class=\"button is-success\">Aceptar</a></p>\n"
+                + "<div>\n"
+                + "</nav>";
+        return botones;
+    }
+
+    public void denegarExperiencia(int idExperiencia) throws SQLException {
+        db.conectar();
+        PreparedStatement ps;
+        String query = ("delete from experiencia where idExperiencia = ?;");
+        ps = db.getC().prepareStatement(query);
+        ps.setInt(1, idExperiencia);
+        ps.executeUpdate();
+        s = db.getC().createStatement();
+        db.cierraConexion();
+        System.out.println("Registro eliminado!");
+
+    }
+
+    public void aceptarExperiencia(int idExperiencia) throws SQLException {
+        db.conectar();
+        PreparedStatement ps;
+        String query = ("update experiencia set estado = 1 where idExperiencia = ?;");
+        ps = db.getC().prepareStatement(query);
+        ps.setInt(1, idExperiencia);
+        ps.executeUpdate();
+        s = db.getC().createStatement();
+        db.cierraConexion();
+        System.out.println("Registro cambiado!");
+
+    }
+}

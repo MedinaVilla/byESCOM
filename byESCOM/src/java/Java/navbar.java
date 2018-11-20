@@ -32,10 +32,8 @@ public class navbar {
             usuario = "<div class='navbar-end'>"
                     + "<div class='navbar-item'>"
                     + "<div class='buttons'>"
-                    + "<a href='./register' class='button is-primary'>"
-                    + "<strong>Registrarse</strong>"
-                    + "</a>"
-                    + "<a href='./login' class='button is-light'>"
+                    + "<div><h1>Eres moderador?</h1></div>"
+                    + "<a href='./login' class='button is-primary'>"
                     + "Iniciar Sesion"
                     + "</a>"
                     + "</div>"
@@ -44,9 +42,22 @@ public class navbar {
                     + "</div>";
         }
         if (tipoUsuario.equals("2")) {
-            moderador = "<a class='navbar-item'>"
+            moderador = "<div class='navbar-item has-dropdown is-hoverable'>"
+                    + "<a class='navbar-link'>"
                     + "Moderador"
-                    + "</a>";
+                    + "</a>"
+                    + "<div class='navbar-dropdown'>"
+                    + "<a href='revisionExperiencias' class='navbar-item'>"
+                    + "Revision de experiencias"
+                    + "</a>"
+                    + "<a class='navbar-item'>"
+                    + "Revision de errores"
+                    + "</a>"
+                    + "<a class='navbar-item'>"
+                    + "Estadisticas"
+                    + "</a>"
+                    + "</div>"
+                    + "</div>";
         }
         navbar = "<nav class='navbar' role='navigation' aria-label='main navigation'>"
                 + "<div class='navbar-brand'>"
@@ -64,7 +75,7 @@ public class navbar {
                 + "<a href='./' class='navbar-item'>"
                 + "Inicio"
                 + "</a>"
-                + "<a class='navbar-item'>"
+                + "<a href='./materias' class='navbar-item'>"
                 + "Materias"
                 + "</a>"
                 + "<div class='navbar-item has-dropdown is-hoverable'>"
