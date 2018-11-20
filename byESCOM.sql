@@ -55,7 +55,7 @@ create table reporte(
 );
 
 create table estadistica(
-	idEstadistica int(2) primary key,
+	idEstadistica int(2) primary key auto_increment,
     pregunta1 varchar(5),
     pregunta2 varchar(5),
     pregunta3 varchar(5),
@@ -96,7 +96,11 @@ values('En el club de Ajderez, no me gusta que la gente se forme de manera fila 
 
 insert into reporte(submodulo,explicacion,metodo,fechaEnvio) values('Materias','Intento entrar a la parte de visualizar materias pero no me abre, me dice status error 404','Pues en el inicio, le di clic en Materias y me aparecio el error','2009-05-31 20:00:00');
 insert into reporte(submodulo,explicacion,metodo,fechaEnvio) values('Perfil','En el perfil no me carga mi informacion no entiendo porque','En la navbar, le de click en Perfil y ahi no puedo ver mi informacion','2009-05-31 20:00:00');
-select * from reporte;
+
+insert into estadistica(pregunta1,pregunta2,pregunta3,pregunta4,pregunta5)values('yes','yes','no','yes','yes');
+select * from estadistica;
+select COUNT(idEstadistica) from estadistica;
+select COUNT(pregunta1),COUNT(pregunta2) from estadistica where pregunta1='no';
 
 insert into usuario values(1, "MedinaVilla", "MedinaVilla", 1);
 insert into usuario values(2, "HernadezR", "HernadezR", 1);

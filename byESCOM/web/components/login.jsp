@@ -56,7 +56,6 @@
                                             <p id="nombreUsuErr" class="help is-danger"> </p>
                                         </div>
                                     </div>
-
                                     <div class="field">
                                         <div class="control">
                                             <input name="password" class="input is-large" type="password" placeholder="Tu password">
@@ -64,7 +63,6 @@
                                             <p id="loginErr" class="help is-danger"> </p>
                                         </div>
                                     </div>
-
                                     <button class="button is-primary  is-large is-fullwidth">Login</button>
                                 </form>
                             </div>
