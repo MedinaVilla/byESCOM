@@ -4,12 +4,18 @@
     Author     : MedinaVilla
 --%>
 
+<%@page import="java.sql.SQLException"%>
 <%@page contentType="text/html" import="Java.*" pageEncoding="UTF-8"%>
 <%
     int idExperiencia = Integer.parseInt(request.getParameter("idExpOk"));
-    experiencia exp = new experiencia();
-    out.println(idExperiencia);
-    exp.aceptarExperiencia(idExperiencia);
+    try {
+        experiencia exp = new experiencia();
+        out.println(idExperiencia);
+        exp.aceptarExperiencia(idExperiencia);
+        response.sendRedirect("./revisionExperiencias");
+    } catch (SQLException e) {
+        out.println(e);
+    }
 %>
 <!DOCTYPE html>
 <html>
