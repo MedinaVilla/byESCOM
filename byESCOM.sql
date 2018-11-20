@@ -47,10 +47,10 @@ create table materia(idMateria int primary key auto_increment,
 	foreign key (idTipoMateria) REFERENCES tipoMateria(idTipoMateria));
 
 create table reporte(
-	idReporte int(2) primary key,
+	idReporte int(2) primary key auto_increment,
     submodulo varchar(30),
     explicacion varchar(100),
-    metodo varchar(50),
+    metodo varchar(100),
     fechaEnvio timestamp default current_timestamp on update current_timestamp
 );
 
@@ -93,6 +93,10 @@ values('En la cafeteria, no me gusta que la gente se forme de manera fila india 
 insert into experiencia(contenido,nombreAlumno,fechaEnvio,tipoExperiencia,estado) 
 values('En el club de Ajderez, no me gusta que la gente se forme de manera fila india ya que cuando esta lloviendo todo se jode',
 'MariaPineda','2009-05-31 20:00:00', 2,2) ; 
+
+insert into reporte(submodulo,explicacion,metodo,fechaEnvio) values('Materias','Intento entrar a la parte de visualizar materias pero no me abre, me dice status error 404','Pues en el inicio, le di clic en Materias y me aparecio el error','2009-05-31 20:00:00');
+insert into reporte(submodulo,explicacion,metodo,fechaEnvio) values('Perfil','En el perfil no me carga mi informacion no entiendo porque','En la navbar, le de click en Perfil y ahi no puedo ver mi informacion','2009-05-31 20:00:00');
+select * from reporte;
 
 insert into usuario values(1, "MedinaVilla", "MedinaVilla", 1);
 insert into usuario values(2, "HernadezR", "HernadezR", 1);

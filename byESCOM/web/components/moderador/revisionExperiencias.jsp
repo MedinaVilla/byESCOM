@@ -21,11 +21,12 @@
     </head>
     <body>
         <%
-            navbar navbar = new navbar();
             try {
+                navbar navbar = new navbar();
                 out.println(navbar.showNavbar(sesion.getAttribute("nombreUsuario").toString(), sesion.getAttribute("tipoUsuario").toString()));
             } catch (Exception e) {
-                out.println(navbar.showNavbar("", ""));
+                out.println(e.toString());
+                response.sendRedirect("./login");
             }
         %>
         <section class="hero is-primary">

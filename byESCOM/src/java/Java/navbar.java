@@ -50,7 +50,7 @@ public class navbar {
                     + "<a href='revisionExperiencias' class='navbar-item'>"
                     + "Revision de experiencias"
                     + "</a>"
-                    + "<a class='navbar-item'>"
+                    + "<a href='revisionErrores' class='navbar-item'>"
                     + "Revision de errores"
                     + "</a>"
                     + "<a class='navbar-item'>"
