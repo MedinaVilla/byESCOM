@@ -15,6 +15,7 @@
         <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"/>
         <link rel="stylesheet" href="./css/bulma.css" type="text/css">
         <link rel="stylesheet" href="./fonts/css/all.css"> 
+        <script src="./js/experiencias/showExperiences.js"></script>
         <title>Experiencias</title>
     </head>
     <body>
@@ -36,14 +37,8 @@
                     </div>
                 </div>
         </section>
-        <section class="hero is-fullheight">
-            <iframe src="./showExperiences" class="hero-body" scrolling="no"></iframe>
-            
-      
-        </section>
-        <%
-            footer footer = new footer();
-            out.println(footer.showFooter());
-        %>
+        <div style="height: 100%; width: 100%">
+            <iframe src="./showExperiences" width="100%" onload="autofitIframe(this);" scrolling="no"></iframe>    
+        </div>
     </body>
 </html>
