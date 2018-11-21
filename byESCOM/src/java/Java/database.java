@@ -45,4 +45,8 @@ public class database {
         return s.executeQuery(consulta);
     }
     
+    public int alta(String consulta) throws SQLException{
+        return s.executeUpdate(consulta);
+    }
+    
 }
