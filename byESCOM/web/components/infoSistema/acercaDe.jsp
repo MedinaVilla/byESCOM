@@ -20,7 +20,6 @@
             navbar navbar = new navbar();
             try {
                 out.println(navbar.showNavbar(sesion.getAttribute("nombreUsuario").toString(), sesion.getAttribute("tipoUsuario").toString()));
-                response.sendRedirect("./indexUser");
             } catch (Exception e) {
                 out.println(navbar.showNavbar("", ""));
 
