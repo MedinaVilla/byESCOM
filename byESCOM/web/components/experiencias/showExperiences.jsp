@@ -32,8 +32,14 @@
             }else{
                 rs=db.getSomeExperiencias(i_tipo);
             }
-            if(rs==null){
-                    out.println("no hay experiencias");
+            if(rs.first()!=true){
+                    out.println("<section class='hero is-danger' style='margin-top: 10px;'>"
+                            + "<div class='hero-body'>"
+                            + "<div class='container'>"
+                            + "<h1 class='title'> No hay experiencias</h1>"
+                            + "</div>"
+                            + "</div>"
+                            + "</section>");
             }else{
                 int i=0;
                 out.println("<div class='tile is-ancestor' style='padding: 20px;'>"

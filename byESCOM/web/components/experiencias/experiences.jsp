@@ -39,7 +39,7 @@
             </div>
         </section>
         <form id="formTipo" action = "./showExperiences" target="framecito" method = "GET">
-            <input id="tipo" name="tipo" type="text" value="0" style="visibility: hidden">
+            <input id="tipo" name="tipo" type="text" value="0" style="visibility: hidden;">
         </form>
         <div class="container has-text-centered">
             <a id="btn_todos" onclick="desplegarExperiencias(0)" class="button is-dark is-rounded">Todos</a>
