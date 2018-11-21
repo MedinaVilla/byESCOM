@@ -16,5 +16,5 @@ function validarLogin() {
     }
 }
 function showErrorLogin() {
-    document.getElementById("loginErr").innerHTML = "Boleta o password son incorrectos";
+    document.getElementById("loginErr").innerHTML = "Usuario o password son incorrectos";
 }

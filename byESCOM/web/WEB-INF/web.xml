@@ -50,7 +50,7 @@
     </servlet>
     <servlet>
         <servlet-name>reportError</servlet-name>
-        <jsp-file>/components/reportError.jsp</jsp-file>
+        <jsp-file>/components/infoSistema/reportError.jsp</jsp-file>
     </servlet>
     <servlet>
         <servlet-name>revisionExperiencias</servlet-name>
@@ -87,6 +87,10 @@
     <servlet>
         <servlet-name>estadistica</servlet-name>
         <jsp-file>/components/moderador/estadistica.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>enviarReporte</servlet-name>
+        <jsp-file>/components/infoSistema/enviarReporteError.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
         <servlet-name>login</servlet-name>
@@ -171,6 +175,10 @@
     <servlet-mapping>
         <servlet-name>estadistica</servlet-name>
         <url-pattern>/estadistica</url-pattern>
+    </servlet-mapping>
+        <servlet-mapping>
+        <servlet-name>enviarReporte</servlet-name>
+        <url-pattern>/enviarReporte</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
