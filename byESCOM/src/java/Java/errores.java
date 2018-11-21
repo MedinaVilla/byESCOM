@@ -23,18 +23,19 @@ public class errores {
         return rs;
     }
 
-    public String imprimirTituloError(String idReporte, String submodulo,String explicacion , String metodo, String fechaEnvio) {
+    public String imprimirTituloError(String idReporte, String submodulo, String explicacion, String metodo, String fechaEnvio) {
         db.conectar();
 
         String alumno;
         alumno = "<ul class='menu-list'>"
-                + "<li><a onClick='showReporteDetails" + "(" + '"' + idReporte + '"' + "," + '"' + submodulo + '"' + "," + '"' + explicacion + '"' +"," + '"' + metodo + '"' + "," + '"' + fechaEnvio + '"' + ")'>" + submodulo + "</a></li>"
+                + "<li><a onClick='showReporteDetails" + "(" + '"' + idReporte + '"' + "," + '"' + submodulo + '"' + "," + '"' + explicacion + '"' + "," + '"' + metodo + '"' + "," + '"' + fechaEnvio + '"' + ")'>" + submodulo + "</a></li>"
                 + "</ul>";
 
         return alumno;
 
     }
-        public void deleteReporte(int idReporte) throws SQLException {
+
+    public void deleteReporte(int idReporte) throws SQLException {
         db.conectar();
         PreparedStatement ps;
         String query = ("delete from reporte where idReporte = ?;");
@@ -45,5 +46,21 @@ public class errores {
         db.cierraConexion();
         System.out.println("Registro eliminado!");
 
+    }
+
+    public void registrarReporte(String submodulo, String explicacion, String metodo) throws SQLException {
+        db.conectar();
+        PreparedStatement ps;
+
+        String queryReport = ("insert into reporte(submodulo,explicacion,metodo)values(?,?,?);");
+
+        ps = db.getC().prepareStatement(queryReport);
+        ps.setString(1, submodulo);
+        ps.setString(2, explicacion);
+        ps.setString(3, metodo);
+        ps.executeUpdate();
+
+        s = db.getC().createStatement();
+        db.cierraConexion();
     }
 }
