@@ -83,7 +83,7 @@ public class navbar {
                 + "<a href='experiences' class='navbar-item'>"
                 + "Catalogo de experiencias"
                 + "</a>"
-                + "<a class='navbar-item'>"
+                + "<a href='enviarExperiencia' class='navbar-item'>"
                 + "Envio de experiencias"
                 + "</a>"
                 + "</div>"

@@ -37,6 +37,14 @@
         <jsp-file>/components/experiencias/showExperiences.jsp</jsp-file>
     </servlet>
     <servlet>
+        <servlet-name>registrarExperiencia</servlet-name>
+        <jsp-file>/components/experiencias/registrarExperiencia.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>enviarExperiencia</servlet-name>
+        <jsp-file>/components/experiencias/enviarExperiencia.jsp</jsp-file>
+    </servlet>
+    <servlet>
         <servlet-name>materias</servlet-name>
         <jsp-file>/components/materia/materia.jsp</jsp-file>
     </servlet>
@@ -131,6 +139,14 @@
     <servlet-mapping>
         <servlet-name>aceptarExperiencia</servlet-name>
         <url-pattern>/aceptarExperiencia</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>enviarExperiencia</servlet-name>
+        <url-pattern>/enviarExperiencia</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>registrarExperiencia</servlet-name>
+        <url-pattern>/registrarExperiencia</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>revisionErrores</servlet-name>
