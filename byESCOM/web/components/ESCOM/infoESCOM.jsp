@@ -52,7 +52,7 @@
                 <div class="column is-three-quarters">
                     <span id="categoria" class="tag is-primary is-primary">Seleccione una categoría</span>
                     <div class="box">
-                        <p id="titulo1" class="title">Descripciéon</p>
+                        <p id="titulo1" class="title">Descripción</p>
                         <div class="plan" name="plan" id="plan"><img hidden src="./img/mapaCurricular.jpg"></div>
                         <p class="has-text-justified" id="contenido1"></p>
                         <div class="mapa" id="mapa" name="mapa"><iframe hidden src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.8600996170026!2d-99.14904048570659!3d19.504653886843382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f835393528b5%3A0x5f2dd0563ce99e8!2sEscuela+Superior+de+C%C3%B3mputo!5e0!3m2!1ses-419!2smx!4v1542728917758" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
