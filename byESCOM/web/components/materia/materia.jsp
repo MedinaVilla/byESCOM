@@ -56,10 +56,10 @@
                     </aside>
                 </div>
                 <div class="column is-three-quarters">
-                    <span id="titulo" class="tag is-primary is-primary">Seleccione una materia</span>
+                    <span id="titulo" class="tag is-primary is-primary has-text-justified">Seleccione una materia</span>
                     <br/>
                     <div class="box">
-                    <p id="descripcion">Descripción</p>
+                        <p id="descripcion" class="has-text-justified">Descripción</p>
                     </div>
                 </div>
             </div>

@@ -5,17 +5,17 @@
  */
 
 //Ajusta el tamaño de un iframe al de su contenido interior para evitar scroll
-function autofitIframe(id){
-    if (!window.opera && document.all && document.getElementById){
-        id.style.height=id.contentWindow.document.body.scrollHeight;
-    } else if(document.getElementById) {
-        id.style.height=id.contentDocument.body.scrollHeight+"px";
+function autofitIframe(id) {
+    if (!window.opera && document.all && document.getElementById) {
+        id.style.height = id.contentWindow.document.body.scrollHeight;
+    } else if (document.getElementById) {
+        id.style.height = id.contentDocument.body.scrollHeight + "px";
     }
 }
 
-function desplegarExperiencias(tipo){
-    var valor=document.getElementById("tipo");
-    var formulario=document.getElementById("formTipo");
-    valor.value=tipo;
+function desplegarExperiencias(tipo) {
+    var valor = document.getElementById("tipo");
+    var formulario = document.getElementById("formTipo");
+    valor.value = tipo;
     formulario.submit();
 }
