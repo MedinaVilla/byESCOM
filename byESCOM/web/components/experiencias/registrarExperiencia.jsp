@@ -1,7 +1,7 @@
 <%-- 
     Document   : registrarExperiencia
     Created on : 21/11/2018, 11:30:31 AM
-    Author     : RubenHH
+    Author     : RubenHHH
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -21,6 +21,7 @@
             String nombre=request.getParameter("nombre");
             String contenido=request.getParameter("experiencia");
             String tipo=request.getParameter("tipos");
+            int s=0;
           
             String query="insert into experiencia(contenido,nombreAlumno,fechaEnvio,tipoExperiencia,estado) values('"+contenido+"'"
                     + ",'"+nombre+"',now(), "+tipo+",2); ";
