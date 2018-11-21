@@ -28,17 +28,29 @@
 
             }
         %>
+        
         <section class="hero is-primary">
-                <div class="hero-body">
-                    <div class="container">
-                        <h1 class="title">
-                            Catalogo de Experiencias
-                        </h1>
-                    </div>
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">
+                        Catalogo de Experiencias
+                    </h1>
                 </div>
+            </div>
         </section>
+        <form id="formTipo" action = "./showExperiences" target="framecito" method = "GET">
+            <input id="tipo" name="tipo" type="text" value="0" style="visibility: hidden">
+        </form>
+        <div class="container has-text-centered">
+            <a id="btn_todos" onclick="desplegarExperiencias(0)" class="button is-dark is-rounded">Todos</a>
+            <a id="btn_cafe" onclick="desplegarExperiencias(1)" class="button is-danger is-rounded">Cafetería</a>
+            <a id="btn_clubes" onclick="desplegarExperiencias(2)" class="button is-info is-rounded">Clubes</a>
+            <a id="btn_social" onclick="desplegarExperiencias(3)" class="button is-success is-rounded">Social</a>
+            <a id="btn_escolar" onclick="desplegarExperiencias(4)" class="button is-warning is-rounded">Escolar</a>
+            <a id="btn_tramites" onclick="desplegarExperiencias(5)" class="button is-link is-rounded">Trámites</a>
+        </div>
         <div style="height: 100%; width: 100%">
-            <iframe src="./showExperiences" width="100%" onload="autofitIframe(this);" scrolling="no"></iframe>    
+            <iframe id="framecito" name="framecito" src="./showExperiences" width="100%" onload="autofitIframe(this);" scrolling="no"></iframe>    
         </div>
     </body>
 </html>

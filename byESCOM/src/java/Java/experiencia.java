@@ -29,6 +29,20 @@ public class experiencia {
         rs = db.consulta(query);
         return rs;
     }
+    
+    public ResultSet getAllExperiencias() throws SQLException{
+        db.conectar();
+        String query = "select nombreAlumno, fechaEnvio,contenido,tipoExperiencia from experiencia where estado=1;";
+        rs=db.consulta(query);
+        return rs;
+    }
+    
+    public ResultSet getSomeExperiencias(int tipo) throws SQLException{
+        db.conectar();
+        String query = "select nombreAlumno, fechaEnvio,contenido,tipoExperiencia from experiencia where estado=1 and tipoExperiencia="+tipo+";";
+        rs=db.consulta(query);
+        return rs;
+    }
 
     public String imprimirNombreAlumnoExperiencia(String idExperiencia, String nombreAlumno, String contenido, String fechaEnvio, String tipoExperiencia) {
         db.conectar();

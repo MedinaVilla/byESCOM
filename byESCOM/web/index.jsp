@@ -42,7 +42,7 @@
             </section>
             <br>
             <div class="columns is-desktop">
-                <div class="column is-12-tablet is-4-desktop">
+                <div class="column is-12-tablet is-4-desktop" style="cursor:pointer">
                     <div class="card hover-hero">
                         <div onClick="javascript: location.href = './materias';" class="hero is-primary hover-hero">
                             <div class="hero-body">
@@ -54,7 +54,7 @@
                 </div>
 
 
-                <div class="column is-12-tablet is-4-desktop">
+                <div class="column is-12-tablet is-4-desktop" style="cursor:pointer">
                     <div class="card hover-hero">
                         <div onClick="javascript: location.href = './experiences';" class="hero is-info hover-hero">
                             <div class="hero-body">
@@ -65,7 +65,7 @@
                     </div>
                 </div>
 
-                <div class="column is-12-tablet is-4-desktop">
+                <div class="column is-12-tablet is-4-desktop" style="cursor:pointer">
                     <div class="card hover-hero">
                         <div onClick="javascript: location.href = './infoESCOM';" class="hero is-danger hover-hero">
                             <div class="hero-body">

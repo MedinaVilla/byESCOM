@@ -13,7 +13,7 @@ public class database {
     private Connection c = null;
     private Statement s = null;
     
-    private final String nombre = "jdbc:mysql://localhost/byESCOM";
+    private final String nombre = "jdbc:mysql://localhost:3306/byescom?autoReconnect=true&useSSL=false";
     private final String usuario = "root";
     private final String password = "n0m3l0";
     private final String driver = "com.mysql.jdbc.Driver";
