@@ -39,7 +39,8 @@
                             + "<h1 class='title'> No hay experiencias</h1>"
                             + "</div>"
                             + "</div>"
-                            + "</section>");
+                            + "</section>"
+                            + "");
             }else{
                 int i=0;
                 out.println("<div class='tile is-ancestor' style='padding: 20px;'>"
