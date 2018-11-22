@@ -126,7 +126,7 @@
                     </tr>
                     <tr>
                         <th class="has-text-centered">
-                            Porcentaje de aceptacion
+                            Porcentaje de aceptación
                         </th>
                         <td class="has-text-centered">
                             <% if (rs1.first()) {

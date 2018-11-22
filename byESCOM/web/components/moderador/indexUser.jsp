@@ -24,16 +24,16 @@
                 try {
                     navbar navbar = new navbar();
                     out.println(navbar.showNavbar(sesion.getAttribute("nombreUsuario").toString(), sesion.getAttribute("tipoUsuario").toString()));
-                } catch (Exception e) {
-                    out.println(e.toString());
-                    response.sendRedirect("./login");
-                }
             %>
             <section class="hero is-primary">
                 <div class="hero-body">
                     <div class="container">
                         <h1 class="title">
-                            Bienvenido moderador <%out.print(sesion.getAttribute("nombreUsuario").toString());%>
+                            Bienvenido moderador <%out.print(sesion.getAttribute("nombreUsuario").toString());
+                                } catch (Exception e) {
+                                    out.println(e.toString());
+                                    response.sendRedirect("./login");
+                                }%>
                     </div>
                 </div>
             </section> 
@@ -42,5 +42,6 @@
     <%
         footer footer = new footer();
         out.println(footer.showFooter());
+        System.out.println("haha");
     %>
 </html>
