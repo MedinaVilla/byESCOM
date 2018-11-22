@@ -13,7 +13,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"/>
-
         <link rel="stylesheet" href="./css/bulma.css" type="text/css"/>
         <link rel="stylesheet" href="./fonts/css/all.css"/> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -52,8 +51,6 @@
                         </div>
                     </div>
                 </div>
-
-
                 <div class="column is-12-tablet is-4-desktop" style="cursor:pointer">
                     <div class="card hover-hero">
                         <div onClick="javascript: location.href = './experiences';" class="hero is-info hover-hero">
@@ -64,7 +61,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="column is-12-tablet is-4-desktop" style="cursor:pointer">
                     <div class="card hover-hero">
                         <div onClick="javascript: location.href = './infoESCOM';" class="hero is-danger hover-hero">

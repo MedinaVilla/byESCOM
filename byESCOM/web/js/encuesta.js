@@ -1,4 +1,3 @@
-
 function validarEncuesta() {
     let respuesta1 = document.forms["encuesta"]["r1"].value;
     let respuesta2 = document.forms["encuesta"]["r2"].value;

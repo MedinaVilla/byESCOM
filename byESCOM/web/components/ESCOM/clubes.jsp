@@ -14,17 +14,16 @@
         <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"/>
         <link rel="stylesheet" href="./css/bulma.css" type="text/css">
         <link rel="stylesheet" href="./fonts/css/all.css">
-         <script src="./js/clubes.js"></script>
+        <script src="./js/clubes.js"></script>
         <title>Clubes</title>
     </head>
     <%
-    navbar navbar = new navbar();
-    try {
-        out.println(navbar.showNavbar(sesion.getAttribute("nombreUsuario").toString(), sesion.getAttribute("tipoUsuario").toString()));
-     } catch (Exception e) {
-        out.println(navbar.showNavbar("", ""));
-
-    }
+        navbar navbar = new navbar();
+        try {
+            out.println(navbar.showNavbar(sesion.getAttribute("nombreUsuario").toString(), sesion.getAttribute("tipoUsuario").toString()));
+        } catch (Exception e) {
+            out.println(navbar.showNavbar("", ""));
+        }
     %>
     <body>
         <section class="hero is-primary">
@@ -35,7 +34,6 @@
                 </div>
             </div>
         </section>
-
         <div class="box">
             <div class="columns">
                 <div class="column">
@@ -43,13 +41,12 @@
                         <p class='menu-label'>Categoría</p>
                         <ul class="menu-list">
                             <%
-                            club club = new club();
-                            ResultSet rs = club.getClubes();
-                            while (rs.next()) {
-                                out.println(club.imprimirTituloClub(rs.getString("idClub").toString(), rs.getString("nombre").toString(), rs.getString("nombreP"), rs.getString("ubicacion"), rs.getString("horario")));
-                            }
-                        %>
-              
+                                club club = new club();
+                                ResultSet rs = club.getClubes();
+                                while (rs.next()) {
+                                    out.println(club.imprimirTituloClub(rs.getString("idClub").toString(), rs.getString("nombre").toString(), rs.getString("nombreP"), rs.getString("ubicacion"), rs.getString("horario")));
+                                }
+                            %>
                         </ul>
                     </aside>
                 </div>
@@ -57,15 +54,15 @@
                     <span id="categoria" class="tag is-primary is-primary">Seleccione una categoría</span>
                     <div class="box">
                         <p id="nombre" class="title"></p>
-                        <p id="profesor" class="title"></p>
-                        <p id="ubicacion" class="title"></p>
-                        <p id="horario" class="title"</p>
-                   </div>
+                        <p id="profesor"></p>
+                        <p id="ubicacion"></p>
+                        <p id="horario"</p>
+                    </div>
+                </div>
             </div>
-        </div>
     </body>
     <%
-     footer footer = new footer();
-     out.println(footer.showFooter());
+        footer footer = new footer();
+        out.println(footer.showFooter());
     %>
 </html>

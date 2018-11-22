@@ -26,12 +26,12 @@ public class club {
     public String imprimirTituloClub(String idClub, String nombre, String idProfesor, String ubicacion, String idHorario) {
         db.conectar();
 
-        String alumno;
-        alumno = "<ul class='menu-list'>"
+        String club;
+        club = "<ul class='menu-list'>"
                 + "<li><a onClick='showClubes" + "(" + '"' + idClub + '"' + "," + '"' + nombre + '"' + "," + '"' + idProfesor + '"' + "," + '"' + ubicacion + '"' + "," + '"' + idHorario + '"' + ")'>" + nombre + "</a></li>"
                 + "</ul>";
 
-        return alumno;
+        return club;
 
     }
 }

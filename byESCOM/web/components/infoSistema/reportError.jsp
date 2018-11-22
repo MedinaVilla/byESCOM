@@ -13,7 +13,7 @@
         <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"/>
         <link rel="stylesheet" href="./css/bulma.css" type="text/css">
         <link rel="stylesheet" href="./fonts/css/all.css"> 
-             <script src="./js/reportError.js"></script>
+        <script src="./js/reportError.js"></script>
         <title>Reportar Error</title>
     </head>
     <body>
@@ -54,7 +54,7 @@
                             <label class="label">¿Podrías explicarnos el error que has encontrado?</label>
                             <div class="control has-icons-left">
                                 <div class="control">
-                                   <input type="textarea" class="textarea is-primary" id="explicacion" name="explicacion" />
+                                    <input type="textarea" class="textarea is-primary" id="explicacion" name="explicacion" />
                                 </div>
                                 <p id="exErr" class="help is-danger"> </p>
                             </div>
@@ -68,16 +68,14 @@
                                 <p id="metErr" class="help is-danger"> </p>
                             </div>
                         </div><br/>
-                         <div class="field is-grouped">
+                        <div class="field is-grouped">
                             <div class="control">
                                 <button class="button is-primary">Enviar reporte</button>
                             </div>
                         </div>
                     </form>
                 </div>
-
-                <div class="column is-one-quarter">
-                </div>
+                <div class="column is-one-quarter"></div>
             </div>
         </div>
     </body>

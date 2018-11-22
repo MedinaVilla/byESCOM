@@ -24,17 +24,14 @@ public class materias {
                 + "on m.idTipoMateria = t.idTipoMateria order by t.tipoMateria, m.titulo;");
 
         rs = db.consulta(query);
-
         return rs;
     }
 
     public ResultSet getMateriaporTitulo(String titulo) throws SQLException {
         db.conectar();
-
         String query = ("select * from materia where titulo=?;");
 
         ps = db.getC().prepareStatement(query);
-
         ps.setString(1, titulo);
 
         return ps.executeQuery();
@@ -42,7 +39,6 @@ public class materias {
 
     public String imprimirCategoria(String categoria) throws SQLException {
         db.conectar();
-
         String publicacion;
         publicacion = "<p class='menu-label'>"
                 + categoria
@@ -56,7 +52,7 @@ public class materias {
 
         String publicacion;
         publicacion = "<ul class='menu-list'>"
-                + "<li><a onClick='showMateriaDetails"+"("+'"'+titulo+'"'+","+ '"'+descripcion+'"'+")'>" + titulo + "</a></li>"
+                + "<li><a onClick='showMateriaDetails" + "(" + '"' + titulo + '"' + "," + '"' + descripcion + '"' + ")'>" + titulo + "</a></li>"
                 + "</ul>";
 
         return publicacion;

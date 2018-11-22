@@ -16,18 +16,17 @@
     <body>
         <%
             database db = new database();
-            db.conectar();   
-            
-            String nombre=request.getParameter("nombre");
-            String contenido=request.getParameter("experiencia");
-            String tipo=request.getParameter("tipos");
-            int s=0;
-          
-            String query="insert into experiencia(contenido,nombreAlumno,fechaEnvio,tipoExperiencia,estado) values('"+contenido+"'"
-                    + ",'"+nombre+"',now(), "+tipo+",2); ";
-            
+            db.conectar();
+
+            String nombre = request.getParameter("nombre");
+            String contenido = request.getParameter("experiencia");
+            String tipo = request.getParameter("tipos");
+            int s = 0;
+
+            String query = "insert into experiencia(contenido,nombreAlumno,fechaEnvio,tipoExperiencia,estado) values('" + contenido + "'"
+                    + ",'" + nombre + "',now(), " + tipo + ",2); ";
             db.alta(query);
-            request.getSession().setAttribute("expSend","EnvioExitoso");
+            request.getSession().setAttribute("expSend", "EnvioExitoso");
             response.sendRedirect("./enviarExperiencia");
         %>
     </body>

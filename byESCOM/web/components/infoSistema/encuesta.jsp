@@ -13,7 +13,7 @@
         <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"/>
         <link rel="stylesheet" href="./css/bulma.css" type="text/css">
         <link rel="stylesheet" href="./fonts/css/all.css"> 
-             <script src="./js/encuesta.js"></script>
+        <script src="./js/encuesta.js"></script>
         <title>Encuesta</title>
     </head>
     <%
@@ -47,7 +47,7 @@
                             <div class="control">
                                 <label class="radio">
                                     <input type="radio" id="r1" value="yes" name="r1">
-                                    Yes
+                                    Si
                                 </label>
                                 <label class="radio">
                                     <input type="radio" id="r1" value="no" name="r1">
@@ -63,7 +63,7 @@
                             <div class="control">
                                 <label class="radio">
                                     <input type="radio" id="r2" value="yes" name="r2">
-                                    Yes
+                                    Si
                                 </label>
                                 <label class="radio">
                                     <input type="radio" id="r2" value="no" name="r2">
@@ -79,7 +79,7 @@
                             <div class="control">
                                 <label class="radio">
                                     <input type="radio" id="r3" value="yes" name="r3">
-                                    Yes
+                                    Si
                                 </label>
                                 <label class="radio">
                                     <input type="radio" id="r3" value="no" name="r3">
@@ -95,7 +95,7 @@
                             <div class="control">
                                 <label class="radio">
                                     <input type="radio" id="r4" value="yes" name="r4">
-                                    Yes
+                                    Si
                                 </label>
                                 <label class="radio">
                                     <input type="radio" id="r4" value="no" name="r4">
@@ -111,7 +111,7 @@
                             <div class="control">
                                 <label class="radio">
                                     <input type="radio" id="r5" value="yes" name="r5">
-                                    Yes
+                                    Si
                                 </label>
                                 <label class="radio">
                                     <input type="radio" id="r5" value="no" name="r5">
@@ -129,11 +129,8 @@
                     </div> 
                 </form>
             </div>
-
-            <div class="column is-one-quarter">
-            </div>
+            <div class="column is-one-quarter"></div>
         </div>
-        
         <br/><br/>
     </body>
     <%

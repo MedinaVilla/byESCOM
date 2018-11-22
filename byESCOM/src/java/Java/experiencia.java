@@ -29,31 +29,30 @@ public class experiencia {
         rs = db.consulta(query);
         return rs;
     }
-    
-    public ResultSet getAllExperiencias() throws SQLException{
+
+    public ResultSet getAllExperiencias() throws SQLException {
         db.conectar();
         String query = "select nombreAlumno, fechaEnvio,contenido,tipoExperiencia from experiencia where estado=1;";
-        rs=db.consulta(query);
+        rs = db.consulta(query);
         return rs;
     }
-    
-    public ResultSet getSomeExperiencias(int tipo) throws SQLException{
+
+    public ResultSet getSomeExperiencias(int tipo) throws SQLException {
         db.conectar();
-        String query = "select nombreAlumno, fechaEnvio,contenido,tipoExperiencia from experiencia where estado=1 and tipoExperiencia="+tipo+";";
-        rs=db.consulta(query);
+        String query = "select nombreAlumno, fechaEnvio,contenido,tipoExperiencia from experiencia where estado=1 and tipoExperiencia=" + tipo + ";";
+        rs = db.consulta(query);
         return rs;
     }
 
     public String imprimirNombreAlumnoExperiencia(String idExperiencia, String nombreAlumno, String contenido, String fechaEnvio, String tipoExperiencia) {
         db.conectar();
 
-        String alumno;
-        alumno = "<ul class='menu-list'>"
+        String alumnoExp;
+        alumnoExp = "<ul class='menu-list'>"
                 + "<li><a onClick='showExperienciaDetails" + "(" + '"' + idExperiencia + '"' + "," + '"' + nombreAlumno + '"' + "," + '"' + contenido + '"' + "," + '"' + fechaEnvio + '"' + "," + '"' + tipoExperiencia + '"' + ")'>" + nombreAlumno + "</a></li>"
                 + "</ul>";
 
-        return alumno;
-
+        return alumnoExp;
     }
 
     public String imprimirBotonesControl() {
@@ -78,7 +77,7 @@ public class experiencia {
         ps.executeUpdate();
         s = db.getC().createStatement();
         db.cierraConexion();
-        System.out.println("Registro eliminado!");
+        System.out.println("Experiencia eliminada!");
 
     }
 
@@ -91,7 +90,7 @@ public class experiencia {
         ps.executeUpdate();
         s = db.getC().createStatement();
         db.cierraConexion();
-        System.out.println("Registro cambiado!");
+        System.out.println("Experiencia aceptada!");
 
     }
 }

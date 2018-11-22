@@ -95,7 +95,7 @@ public class navbar {
                 + "Catálogo de experiencias"
                 + "</a>"
                 + "<a href='enviarExperiencia' class='navbar-item'>"
-                + "Envio de experiencias"
+                + "Envío de experiencias"
                 + "</a>"
                 + "</div>"
                 + "</div>"

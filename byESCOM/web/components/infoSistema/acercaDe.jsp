@@ -22,7 +22,6 @@
                 out.println(navbar.showNavbar(sesion.getAttribute("nombreUsuario").toString(), sesion.getAttribute("tipoUsuario").toString()));
             } catch (Exception e) {
                 out.println(navbar.showNavbar("", ""));
-
             }
         %>
         <section class="hero is-primary">
@@ -34,7 +33,7 @@
                 </div>
             </div>
         </section> 
-        <div class="box has-text-centered">Equipo de trabajo que desarrollo <strong>byESCOM</strong></div>
+        <div class="box has-text-centered">Equipo de trabajo que desarrolló <strong>byESCOM</strong></div>
         <div class="container">
             <div class="columns">
                 <div class="column">

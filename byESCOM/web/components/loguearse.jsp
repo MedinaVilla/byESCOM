@@ -31,7 +31,6 @@
     } catch (Exception e) {
         response.sendRedirect("./login");
     }
-
 %>
 <!DOCTYPE html>
 <html>
@@ -40,6 +39,5 @@
         <title>Loading</title>
     </head>
     <body>
-
     </body>
 </html>

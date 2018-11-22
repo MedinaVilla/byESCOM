@@ -3,7 +3,6 @@
     Created on : 19/11/2018, 08:32:22 PM
     Author     : MedinaVilla
 --%>
-
 <%@page import="java.sql.ResultSet"%>
 <%@page contentType="text/html" import="Java.*" pageEncoding="UTF-8"%>
 <%HttpSession sesion = request.getSession();%>
@@ -90,7 +89,6 @@
                 </div>
             </div>
         </div>
-
     </body>
     <%
         footer footer = new footer();

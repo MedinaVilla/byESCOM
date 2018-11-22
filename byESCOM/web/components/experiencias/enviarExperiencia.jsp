@@ -49,29 +49,29 @@
                                     </div>
                                 </div>
                                 <div class="field">
-                                  <div class="control">
-                                      <textarea id="experiencia" name="experiencia" class="textarea is-large" rows="9" maxlength="350" onkeyup="cuenta()" onkeydown="cuenta()" placeholder="Escribe aquí tu experiencia..."></textarea>
-                                      <p id="areaExpErr" class="help is-danger"> </p>
-                                  </div>
+                                    <div class="control">
+                                        <textarea id="experiencia" name="experiencia" class="textarea is-large" rows="9" maxlength="350" onkeyup="cuenta()" onkeydown="cuenta()" placeholder="Escribe aquí tu experiencia..."></textarea>
+                                        <p id="areaExpErr" class="help is-danger"> </p>
+                                    </div>
                                     <span id="counter" class="tag is-dark is-rounded" style="float: right; margin-bottom: 5px;">0/350</span>
                                 </div>
                                 <div class="field">
                                     <div class="control">
-                                      <div class="select">
-                                        <select name="tipos" id="tipos">
-                                            <option value="0">Selecciona un lugar</option>
-                                            <%
-                                                database db = new database();
-                                                ResultSet rs = null;
-                                                db.conectar();
-                                                rs = db.consulta("select* from tipo_experiencia;");
-                                                while(rs.next()){
-                                                    out.println("<option value='"+rs.getInt("idTipoExperiencia")+"'>"+rs.getString("tipoExperiencia")+"</option>");
-                                                }
-                                            %>
-                                        </select>
-                                        <p id="tipoExpErr" class="help is-danger"> </p>
-                                      </div>
+                                        <div class="select">
+                                            <select name="tipos" id="tipos">
+                                                <option value="0">Selecciona un lugar</option>
+                                                <%
+                                                    database db = new database();
+                                                    ResultSet rs = null;
+                                                    db.conectar();
+                                                    rs = db.consulta("select* from tipo_experiencia;");
+                                                    while (rs.next()) {
+                                                        out.println("<option value='" + rs.getInt("idTipoExperiencia") + "'>" + rs.getString("tipoExperiencia") + "</option>");
+                                                    }
+                                                %>
+                                            </select>
+                                            <p id="tipoExpErr" class="help is-danger"> </p>
+                                        </div>
                                     </div>
                                 </div>
                                 <br>
@@ -79,13 +79,13 @@
                             </form>
                         </div>
                     </div>
-                    </div>
+                </div>
             </div>
         </section>
-        <%  
+        <%
             footer footer = new footer();
             out.println(footer.showFooter());
-            if(request.getSession().getAttribute("expSend")=="EnvioExitoso"){
+            if (request.getSession().getAttribute("expSend") == "EnvioExitoso") {
                 out.println("<script>alert('Envío Exitoso');</script>");
             }
         %>

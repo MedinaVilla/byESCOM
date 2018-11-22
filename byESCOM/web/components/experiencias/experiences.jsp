@@ -28,7 +28,7 @@
 
             }
         %>
-        
+
         <section class="hero is-primary">
             <div class="hero-body">
                 <div class="container">

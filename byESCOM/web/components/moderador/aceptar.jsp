@@ -15,6 +15,7 @@
         response.sendRedirect("./revisionExperiencias");
     } catch (SQLException e) {
         out.println(e);
+        response.sendRedirect("./indexUser");
     }
 %>
 <!DOCTYPE html>
@@ -24,6 +25,5 @@
         <title>Loading</title>
     </head>
     <body>
-        <h1>Aceptar</h1>
     </body>
 </html>

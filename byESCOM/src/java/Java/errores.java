@@ -26,12 +26,12 @@ public class errores {
     public String imprimirTituloError(String idReporte, String submodulo, String explicacion, String metodo, String fechaEnvio) {
         db.conectar();
 
-        String alumno;
-        alumno = "<ul class='menu-list'>"
+        String error;
+        error = "<ul class='menu-list'>"
                 + "<li><a onClick='showReporteDetails" + "(" + '"' + idReporte + '"' + "," + '"' + submodulo + '"' + "," + '"' + explicacion + '"' + "," + '"' + metodo + '"' + "," + '"' + fechaEnvio + '"' + ")'>" + submodulo + "</a></li>"
                 + "</ul>";
 
-        return alumno;
+        return error;
 
     }
 
@@ -51,7 +51,6 @@ public class errores {
     public void registrarReporte(String submodulo, String explicacion, String metodo) throws SQLException {
         db.conectar();
         PreparedStatement ps;
-
         String queryReport = ("insert into reporte(submodulo,explicacion,metodo)values(?,?,?);");
 
         ps = db.getC().prepareStatement(queryReport);

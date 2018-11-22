@@ -48,36 +48,46 @@ public class encuesta {
 
     public ResultSet getAnswerPregunta1() throws SQLException {
         db.conectar();
-       // String query = ("select COUNT(idEstadistica) from estadistica;");
-       // rs = db.consulta(query);
+        String query = ("SELECT \n"
+                + "	(SELECT COUNT(pregunta1) FROM estadistica WHERE pregunta1=\"yes\") AS 'p1YES',\n"
+                + "    (SELECT COUNT(pregunta1) FROM estadistica WHERE pregunta1=\"no\") AS 'p1NO';");
+        rs = db.consulta(query);
         return rs;
     }
 
     public ResultSet getAnswerPregunta2() throws SQLException {
         db.conectar();
-      //  String query = ("select COUNT(idEstadistica) from estadistica;");
-      //  rs = db.consulta(query);
+        String query = ("SELECT \n"
+                + "	(SELECT COUNT(pregunta2) FROM estadistica WHERE pregunta2=\"yes\") AS 'p2YES',\n"
+                + "    (SELECT COUNT(pregunta2) FROM estadistica WHERE pregunta2=\"no\") AS 'p2NO';;");
+        rs = db.consulta(query);
         return rs;
     }
 
     public ResultSet getAnswerPregunta3() throws SQLException {
         db.conectar();
-      //  String query = ("select COUNT(idEstadistica) from estadistica;");
-      //  rs = db.consulta(query);
+        String query = ("SELECT \n"
+                + "	(SELECT COUNT(pregunta3) FROM estadistica WHERE pregunta3=\"yes\") AS 'p3YES',\n"
+                + "    (SELECT COUNT(pregunta3) FROM estadistica WHERE pregunta3=\"no\") AS 'p3NO';");
+        rs = db.consulta(query);
         return rs;
     }
 
     public ResultSet getAnswerPregunta4() throws SQLException {
         db.conectar();
-       // String query = ("select COUNT(idEstadistica) from estadistica;");
-       // rs = db.consulta(query);
+        String query = ("SELECT \n"
+                + "	(SELECT COUNT(pregunta4) FROM estadistica WHERE pregunta4=\"yes\") AS 'p4YES',\n"
+                + "    (SELECT COUNT(pregunta4) FROM estadistica WHERE pregunta4=\"no\") AS 'p4NO';");
+        rs = db.consulta(query);
         return rs;
     }
 
     public ResultSet getAnswerPregunta5() throws SQLException {
         db.conectar();
-       // String query = ("select COUNT(idEstadistica) from estadistica;");
-       // rs = db.consulta(query);
+        String query = ("SELECT \n"
+                + "	(SELECT COUNT(pregunta5) FROM estadistica WHERE pregunta5=\"yes\") AS 'p5YES',\n"
+                + "    (SELECT COUNT(pregunta5) FROM estadistica WHERE pregunta5=\"no\") AS 'p5NO';");
+        rs = db.consulta(query);
         return rs;
     }
 }

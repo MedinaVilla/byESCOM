@@ -22,6 +22,7 @@
         response.sendRedirect("./reportarError");
     } catch (SQLException e) {
         out.println(e.toString());
+        response.sendRedirect("./reportarError");
     }
 %>
 <!DOCTYPE html>

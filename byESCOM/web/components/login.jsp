@@ -19,7 +19,6 @@
         <script src="./js/login.js"></script>
         <title>Login</title>
     </head>
-
     <body>
         <div>
             <%
@@ -29,7 +28,6 @@
                     response.sendRedirect("./indexUser");
                 } catch (Exception e) {
                     out.println(navbar.showNavbar("", ""));
-
                 }
             %>
             <section class="hero is-primary">
@@ -81,8 +79,6 @@
     </script> 
     <%
         }
-    %>
-    <%
         footer footer = new footer();
         out.println(footer.showFooter());
     %>

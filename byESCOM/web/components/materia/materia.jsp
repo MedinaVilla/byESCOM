@@ -49,9 +49,8 @@
                                     out.println(materia.imprimirCategoria(rs.getString("tipoMateria").toString()));
                                     cateIni = rs.getString("tipoMateria").toString();
                                 }
-                                out.println(materia.imprimirTitulo(rs.getString("titulo"),rs.getString("descripcion")));
+                                out.println(materia.imprimirTitulo(rs.getString("titulo"), rs.getString("descripcion")));
                             };
-
                         %>
                     </aside>
                 </div>
