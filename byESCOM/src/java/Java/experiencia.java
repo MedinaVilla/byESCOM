@@ -20,6 +20,7 @@ public class experiencia {
     Statement s = null;
     ResultSet rs = null;
     private PreparedStatement ps = null;
+    private int count;
     private final database db = new database();
 
     public ResultSet getExperienciasEnRevision() throws SQLException {
@@ -42,6 +43,28 @@ public class experiencia {
         String query = "select nombreAlumno, fechaEnvio,contenido,tipoExperiencia from experiencia where estado=1 and tipoExperiencia=" + tipo + ";";
         rs = db.consulta(query);
         return rs;
+    }
+    
+    public int getCountAll() throws SQLException {
+        db.conectar();
+        String query = "select count(idExperiencia) from experiencia where estado=1;";
+        rs= db.consulta(query);
+        while(rs.next()){
+            count=rs.getInt("count(idExperiencia)");
+        }
+
+        return count;
+    }
+    
+    public int getCountSome(int tipo) throws SQLException {
+        db.conectar();
+        String query = "select count(idExperiencia) from experiencia where estado=1 and tipoExperiencia=" + tipo + ";";
+        rs= db.consulta(query);
+        while(rs.next()){
+            count=rs.getInt("count(idExperiencia)");
+        }
+
+        return count;
     }
 
     public String imprimirNombreAlumnoExperiencia(String idExperiencia, String nombreAlumno, String contenido, String fechaEnvio, String tipoExperiencia) {
