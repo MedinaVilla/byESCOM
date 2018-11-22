@@ -8,6 +8,32 @@ function cuenta(){
     document.getElementById("counter").innerHTML=(document.getElementById("experiencia").value.length+"/350");
 } 
 
+function noEnter(texto, e)	{
+    if (navigator.appName === "Netscape")
+        tecla = e.which;
+    else 
+        tecla = e.keyCode;
+    if (tecla === 13)
+        return false;
+    else
+        return true;
+}
+
+function NumText(string){
+    var out = '';
+ 
+    var filtro = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ1234567890,.!¡¿?:()';//Caracteres validos
+	
+    for (var i=0; i<string.length; i++)
+       if (filtro.indexOf(string.charAt(i)) != -1) 
+	     out += string.charAt(i);
+    return out;
+}
+
+function check(texto, e, id){
+    document.getElementById(id).value=NumText(texto)
+    return noEnter(texto,e);
+}
 function validarExp(){
     let nombre=document.forms["form_sendExp"]["nombre"].value;
     let area=document.forms["form_sendExp"]["experiencia"].value;

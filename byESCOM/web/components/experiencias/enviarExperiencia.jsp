@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="field">
                                     <div class="control">
-                                        <textarea id="experiencia" name="experiencia" class="textarea is-large" rows="9" maxlength="350" onkeyup="cuenta()" onkeydown="cuenta()" placeholder="Escribe aquí tu experiencia..."></textarea>
+                                        <textarea id="experiencia" name="experiencia" class="textarea is-large" onblur="this.value=NumText(this.value)" onkeyPress="return check(this.value, event,'experiencia')" rows="9" maxlength="350" onkeyup="cuenta()" onkeydown="cuenta()" placeholder="Escribe aquí tu experiencia..."></textarea>
                                         <p id="areaExpErr" class="help is-danger"> </p>
                                     </div>
                                     <span id="counter" class="tag is-dark is-rounded" style="float: right; margin-bottom: 5px;">0/350</span>
@@ -87,6 +87,7 @@
             out.println(footer.showFooter());
             if (request.getSession().getAttribute("expSend") == "EnvioExitoso") {
                 out.println("<script>alert('Envío Exitoso');</script>");
+                request.getSession().setAttribute("expSend", "");
             }
         %>
     </body>
