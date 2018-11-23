@@ -26,22 +26,28 @@
             } else {
                 i_tipo = 0;
             }
+            boolean vacio=false;
             if (i_tipo == 0) {
                 rs = db.getAllExperiencias();
-
+                if(db.getCountAll()==0){
+                    vacio=true;
+                }
             } else {
                 rs = db.getSomeExperiencias(i_tipo);
+                if(db.getCountSome(i_tipo)==0){
+                    vacio=true;
+                }
             }
-//            if(rs.first()!=true){
-//                    out.println("<section class='hero is-danger' style='margin-top: 10px;'>"
-//                            + "<div class='hero-body'>"
-//                            + "<div class='container'>"
-//                            + "<h1 class='title'> No hay experiencias</h1>"
-//                            + "</div>"
-//                            + "</div>"
-//                            + "</section>"
-//                            + "");
-//            }else{
+            if(vacio){
+                    out.println("<section class='hero is-danger' style='margin-top: 10px;'>"
+                            + "<div class='hero-body'>"
+                            + "<div class='container'>"
+                            + "<h1 class='title'> No hay experiencias</h1>"
+                            + "</div>"
+                            + "</div>"
+                            + "</section>"
+                            + "");
+            }else{
             int i = 0;
             out.println("<div class='tile is-ancestor' style='padding: 20px;'>"
                     + "<div class='tile is-fullhd is-vertical'>"
@@ -65,7 +71,7 @@
             out.println("</div>"
                     + "</div>"
                     + "</div>");
-            //}
+            }
             footer footer = new footer();
             out.println(footer.showFooter());
         %>

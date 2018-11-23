@@ -22,7 +22,7 @@ function noEnter(texto, e)	{
 function NumText(string){
     var out = '';
  
-    var filtro = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ1234567890,.!¡¿?:()';//Caracteres validos
+    var filtro = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ1234567890,.!¡¿?:() ';//Caracteres validos
 	
     for (var i=0; i<string.length; i++)
        if (filtro.indexOf(string.charAt(i)) != -1) 
