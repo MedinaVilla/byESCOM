@@ -45,6 +45,7 @@
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <h3 class="title has-text-grey">¡Cuentanos tus experiencias que hayas vivido en ESCOM!</h3>
+                     <p id="r1Err" class="help is-danger">*Nota: Redacte su experiencia de la mejor manera y no incluya palabras groseras ni altisonantes.</p>
                     <div class="column is-6 is-offset-3">
                         <div class="box">
                             <form name="form_sendExp" action="./registrarExperiencia" onsubmit="return validarExp()">

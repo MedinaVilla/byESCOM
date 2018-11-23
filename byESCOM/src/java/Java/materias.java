@@ -52,7 +52,7 @@ public class materias {
 
         String publicacion;
         publicacion = "<ul class='menu-list'>"
-                + "<li><a onClick='showMateriaDetails" + "(" + '"' + titulo + '"' + "," + '"' + descripcion + '"' + ")'>" + titulo + "</a></li>"
+                + "<li><a onClick='showMateriaDetails" + "(" + '"' + titulo + '"' + "," + '"' + descripcion + '"' + ");javascript:"+"window.scrollBy(0,-10000)'>" + titulo + "</a></li>"
                 + "</ul>";
 
         return publicacion;

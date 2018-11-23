@@ -75,7 +75,7 @@
                                 </div>
                             </div>
                             <div class="content">
-                                Front-end and Back-end programmer<a>@Ruben35</a>.
+                                Front-end and Back-end programmer<a href="https://github.com/Ruben35">@Ruben35</a>.
                                 <a href="#">#ESCOM</a> <a href="#">#IPN</a>
                                 <br>
                                 <time datetime="2018-11-21">11:09 AM - 21 November 2018</time>
@@ -99,7 +99,7 @@
                             </div>
 
                             <div class="content">
-                                Analyzer and project documenter <a>@YosafatM</a>.
+                                Analyzer and project documenter <a href="https://github.com/YosafatM">@YosafatM</a>.
                                 <a href="#">#ESCOM</a> <a href="#">#IPN</a>
                                 <br>
                                 <time datetime="2018-11-21">11:09 AM - 21 November 2018</time>
@@ -122,7 +122,7 @@
                                 </div>
                             </div>
                             <div class="content">
-                                Analyzer and project documenter <a>@Sergio884</a>.
+                                Analyzer and project documenter <a href="https://github.com/Sergio884">@Sergio884</a>.
                                 <a href="#">#ESCOM</a> <a href="#">#IPN</a>
                                 <br>
                                 <time datetime="2018-11-21">11:09 AM - 21 November 2018</time>
