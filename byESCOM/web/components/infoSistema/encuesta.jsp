@@ -13,6 +13,7 @@
         <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"/>
         <link rel="stylesheet" href="./css/bulma.css" type="text/css">
         <link rel="stylesheet" href="./fonts/css/all.css"> 
+        <script src="./js/jquery.min.js"></script>
         <script src="./js/encuesta.js"></script>
         <title>Encuesta</title>
     </head>
@@ -35,6 +36,11 @@
         </section>
         <br/>
         <div class="box has-text-centered">Nos gustaría que nos brindara su opinión acerca de la plataforma para nosotros poder mejor para hacer cada vez mejores.</div>
+        <div  id="success" name="success" class="success">
+            <div hidden class="notification is-success has-text-centered">
+                Encuesta enviada correctamente. Gracias por participar.
+            </div>
+        </div>
         <br/><br/>
         <div class="columns">
             <div class="column is-one-quarter">
@@ -136,5 +142,9 @@
     <%
         footer footer = new footer();
         out.println(footer.showFooter());
+        if (request.getSession().getAttribute("encSend") == "EnvioExitoso") {
+    %><script> $(".success div").removeAttr("hidden");</script><%
+            session.removeAttribute("encSend");
+        }
     %>
 </html>

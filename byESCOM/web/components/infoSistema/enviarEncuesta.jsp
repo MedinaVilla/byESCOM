@@ -24,6 +24,7 @@
     
     try {
         encuesta.registrarEncuesta(r1, r2, r3, r4, r5);
+        request.getSession().setAttribute("encSend", "EnvioExitoso");
         response.sendRedirect("./encuesta");
     } catch (SQLException e) {
         out.println(e.toString());

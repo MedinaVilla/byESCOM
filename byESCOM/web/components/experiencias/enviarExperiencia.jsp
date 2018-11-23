@@ -14,6 +14,7 @@
         <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"/>
         <link rel="stylesheet" href="./css/bulma.css" type="text/css">
         <link rel="stylesheet" href="./fonts/css/all.css" >
+         <script src="./js/jquery.min.js"></script>
         <script src="./js/experiencias/sendExperiences.js"></script>
         <title>Envío de experiencias</title>
     </head>
@@ -35,6 +36,11 @@
                 </div>
             </div>
         </section>
+        <div  id="success" name="success" class="success">
+            <div hidden class="notification is-success has-text-centered">
+                Experiencia enviada correctamente. Un moderador se encargará de revisar su experiencia y validarla.
+            </div>
+        </div>
         <section class="hero is-succes is-fullheight">
             <div class="hero-body">
                 <div class="container has-text-centered">
@@ -59,7 +65,7 @@
                                     <div class="control">
                                         <div class="select">
                                             <select name="tipos" id="tipos">
-                                                <option value="0">Selecciona un lugar</option>
+                                                <option value="0">Selecciona un área</option>
                                                 <%
                                                     database db = new database();
                                                     ResultSet rs = null;
@@ -86,8 +92,10 @@
             footer footer = new footer();
             out.println(footer.showFooter());
             if (request.getSession().getAttribute("expSend") == "EnvioExitoso") {
-                out.println("<script>alert('Envío Exitoso');</script>");
-            }
+        %><script> $(".success div").removeAttr("hidden");</script><%
+            session.removeAttribute("expSend");
+        }
+
         %>
     </body>
 </html>
