@@ -19,6 +19,7 @@
 
     try {
         reporteError.registrarReporte(submodulo, explicacion, metodo);
+        request.getSession().setAttribute("repSend", "EnvioExitoso");
         response.sendRedirect("./reportarError");
     } catch (SQLException e) {
         out.println(e.toString());

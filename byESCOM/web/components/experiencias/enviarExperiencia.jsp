@@ -14,7 +14,7 @@
         <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"/>
         <link rel="stylesheet" href="./css/bulma.css" type="text/css">
         <link rel="stylesheet" href="./fonts/css/all.css" >
-         <script src="./js/jquery.min.js"></script>
+        <script src="./js/jquery.min.js"></script>
         <script src="./js/experiencias/sendExperiences.js"></script>
         <title>Envío de experiencias</title>
     </head>

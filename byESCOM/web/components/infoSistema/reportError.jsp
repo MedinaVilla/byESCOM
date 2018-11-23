@@ -13,6 +13,7 @@
         <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"/>
         <link rel="stylesheet" href="./css/bulma.css" type="text/css">
         <link rel="stylesheet" href="./fonts/css/all.css"> 
+        <script src="./js/jquery.min.js"></script>
         <script src="./js/reportError.js"></script>
         <title>Reportar Error</title>
     </head>
@@ -34,6 +35,11 @@
             </div>
         </section>
         <div class="box has-text-centered">Nos gustaría que nos comunique errores que haya encontrado en la plataforma para solucionarlo lo antes posible.</div>
+        <div  id="success" name="success" class="success">
+            <div hidden class="notification is-success has-text-centered">
+                Reporte enviado correctamente. Nos encargaremos de revisarlo y corregilo lo antes posible :)
+            </div>
+        </div>
         <br/>
         <div class="columns">
             <div class="column is-one-quarter">
@@ -82,5 +88,9 @@
     <%
         footer footer = new footer();
         out.println(footer.showFooter());
+        if (request.getSession().getAttribute("repSend") == "EnvioExitoso") {
+    %><script> $(".success div").removeAttr("hidden");</script><%
+            session.removeAttribute("repSend");
+        }
     %>
 </html>
