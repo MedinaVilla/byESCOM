@@ -13,6 +13,11 @@ function validarLogin() {
     }
     if ((!nombreUsu) || (!password)) {
         return false;
+    }else{
+        let elemento = document.getElementById("boton");
+        elemento.disabled = true;
+        elemento.className += " is-loading";
+        return true;
     }
 }
 function showErrorLogin() {

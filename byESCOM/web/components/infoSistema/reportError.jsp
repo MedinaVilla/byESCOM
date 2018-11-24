@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="./fonts/css/all.css"> 
         <script src="./js/jquery.min.js"></script>
         <script src="./js/reportError.js"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
         <title>Reportar Error</title>
     </head>
     <body>
@@ -37,7 +38,12 @@
         <div class="box has-text-centered">Nos gustaría que nos comunique errores que haya encontrado en la plataforma para solucionarlo lo antes posible.</div>
         <div  id="success" name="success" class="success">
             <div hidden class="notification is-success has-text-centered">
-                Reporte enviado correctamente. Nos encargaremos de revisarlo y corregilo lo antes posible :)
+                Reporte enviado correctamente. Nos encargaremos de revisarlo y corregirlo lo antes posible :)
+            </div>
+        </div>
+        <div  id="danger" name="danger" class="danger">
+            <div hidden class="notification is-danger has-text-centered">
+                Porfavor, verifica el reCAPTCHA
             </div>
         </div>
         <br/>
@@ -53,7 +59,7 @@
                                 <div class="control">
                                     <input type="text" class="input is-primary" id="submodulo" name="submodulo"/>
                                 </div>
-                                <p id="sbErr" class="help is-danger"> </p>
+                                <p hidden id="sbErr" class="help is-danger"> </p>
                             </div>
                         </div>
                         <div class="field">
@@ -62,7 +68,7 @@
                                 <div class="control">
                                     <input type="textarea" class="textarea is-primary" id="explicacion" name="explicacion" />
                                 </div>
-                                <p id="exErr" class="help is-danger"> </p>
+                                <p hidden id="exErr" class="help is-danger"> </p>
                             </div>
                         </div>
                         <div class="field">
@@ -71,12 +77,14 @@
                                 <div class="control">
                                     <input type="textarea" class="textarea is-primary" id="metodo" name="metodo" />
                                 </div>
-                                <p id="metErr" class="help is-danger"> </p>
+                                <p hidden id="metErr" class="help is-danger"> </p>
                             </div>
-                        </div><br/>
+                        </div>
+                        <div class="g-recaptcha" data-sitekey="6LdV1XwUAAAAAINM-7iisDw8TvOkhocKo1ioDUi8"></div>
+                        <p hidden id="captchaErr" class="help is-danger" style="float: left"> </p><br>
                         <div class="field is-grouped">
                             <div class="control">
-                                <button class="button is-primary">Enviar reporte</button>
+                                <button id="boton" class="button is-primary">Enviar reporte</button>
                             </div>
                         </div>
                     </form>
@@ -90,6 +98,9 @@
         out.println(footer.showFooter());
         if (request.getSession().getAttribute("repSend") == "EnvioExitoso") {
     %><script> $(".success div").removeAttr("hidden");</script><%
+            session.removeAttribute("repSend");
+        }else if(request.getSession().getAttribute("repSend") == "Bot"){
+            %><script> $(".danger div").removeAttr("hidden");</script><%
             session.removeAttribute("repSend");
         }
     %>

@@ -52,5 +52,9 @@
         <div style="height: 100%; width: 100%">
             <iframe id="framecito" name="framecito" src="./showExperiences" width="100%" onload="autofitIframe(this);" scrolling="no"></iframe>    
         </div>
+        <%
+        footer footer = new footer();
+        out.println(footer.showFooter());
+        %>
     </body>
 </html>

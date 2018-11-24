@@ -53,7 +53,6 @@
                     + "<div class='tile is-fullhd is-vertical'>"
                     + "<div class='tile'>");
             while (rs.next()) {
-                out.println("<script>console.log(" + i + "+' " + rs.getString("nombreAlumno") + "')</script>");
                 if (i == 3) {
                     out.println("</div>"
                             + "<div class='tile'>");
@@ -72,8 +71,7 @@
                     + "</div>"
                     + "</div>");
             }
-            footer footer = new footer();
-            out.println(footer.showFooter());
+            
         %>
     </body>
 </html>

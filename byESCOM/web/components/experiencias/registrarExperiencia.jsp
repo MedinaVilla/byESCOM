@@ -18,15 +18,25 @@
             database db = new database();
             db.conectar();
 
-            String nombre = request.getParameter("nombre");
-            String contenido = request.getParameter("experiencia");
-            String tipo = request.getParameter("tipos");
-            int s = 0;
+            request.setCharacterEncoding("UTF-8");
+            
+            String gRecaptchaResponse = request.getParameter("g-recaptcha-response");
+            boolean verify = VerifyRecaptcha.verify(gRecaptchaResponse);
 
-            String query = "insert into experiencia(contenido,nombreAlumno,fechaEnvio,tipoExperiencia,estado) values('" + contenido + "'"
-                    + ",'" + nombre + "',now(), " + tipo + ",2); ";
-            db.alta(query);
-            request.getSession().setAttribute("expSend", "EnvioExitoso");
+            if(verify){
+                String nombre = request.getParameter("nombre");
+                String contenido = request.getParameter("experiencia");
+                String tipo = request.getParameter("tipos");
+                int s = 0;
+
+                String query = "insert into experiencia(contenido,nombreAlumno,fechaEnvio,tipoExperiencia,estado) values('" + contenido + "'"
+                        + ",'" + nombre + "',now(), " + tipo + ",2); ";
+                db.alta(query);
+                request.getSession().setAttribute("expSend", "EnvioExitoso");
+            }else{
+                request.getSession().setAttribute("expSend", "Bot");
+            }
+            
             response.sendRedirect("./enviarExperiencia");
         %>
     </body>

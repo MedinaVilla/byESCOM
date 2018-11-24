@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="./fonts/css/all.css"> 
         <script src="./js/jquery.min.js"></script>
         <script src="./js/encuesta.js"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
         <title>Encuesta</title>
     </head>
     <%
@@ -41,6 +42,11 @@
                 Encuesta enviada correctamente. Gracias por participar.
             </div>
         </div>
+        <div  id="danger" name="danger" class="danger">
+            <div hidden class="notification is-danger has-text-centered">
+                Porfavor, verifica el reCAPTCHA
+            </div>
+        </div>
         <br/><br/>
         <div class="columns">
             <div class="column is-one-quarter">
@@ -60,7 +66,7 @@
                                     No
                                 </label>
                             </div>
-                            <p id="r1Err" class="help is-danger"> </p>
+                            <p hidden id="r1Err" class="help is-danger"> </p>
                         </div>
                     </div>
                     <div class="field">
@@ -76,7 +82,7 @@
                                     No
                                 </label>
                             </div>
-                            <p id="r2Err" class="help is-danger"> </p>
+                            <p hidden id="r2Err" class="help is-danger"> </p>
                         </div>
                     </div>
                     <div class="field">
@@ -92,7 +98,7 @@
                                     No
                                 </label>
                             </div>
-                            <p id="r3Err" class="help is-danger"> </p>
+                            <p hidden id="r3Err" class="help is-danger"> </p>
                         </div>
                     </div>
                     <div class="field">
@@ -108,7 +114,7 @@
                                     No
                                 </label>
                             </div>
-                            <p id="r4Err" class="help is-danger"> </p>
+                            <p hidden id="r4Err" class="help is-danger"> </p>
                         </div>
                     </div>
                     <div class="field">
@@ -124,12 +130,14 @@
                                     No
                                 </label>
                             </div>
-                            <p id="r5Err" class="help is-danger"> </p>
+                            <p hidden id="r5Err" class="help is-danger"> </p>
                         </div>
-                        <br/><br/>
+                        <br/>
+                        <div class="g-recaptcha" data-sitekey="6LdV1XwUAAAAAINM-7iisDw8TvOkhocKo1ioDUi8"></div>
+                        <p hidden id="captchaErr" class="help is-danger" style="float: left"> </p><br/>
                         <div class="field is-grouped">
                             <div class="control">
-                                <button class="button is-primary">Enviar</button>
+                                <button id="boton" class="button is-primary">Enviar</button>
                             </div>
                         </div>
                     </div> 
@@ -144,6 +152,9 @@
         out.println(footer.showFooter());
         if (request.getSession().getAttribute("encSend") == "EnvioExitoso") {
     %><script> $(".success div").removeAttr("hidden");</script><%
+            session.removeAttribute("encSend");
+        }else if(request.getSession().getAttribute("encSend") == "Bot"){
+            %><script> $(".danger div").removeAttr("hidden");</script><%
             session.removeAttribute("encSend");
         }
     %>

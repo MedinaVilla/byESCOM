@@ -63,11 +63,11 @@
                             <div class="level-right">
                                 <form name="denegar" action="./denegarExperiencia">
                                     <input id="idExpR" name="idExpR" hidden></input>
-                                    <p class="level-item reject"><button hidden id="Denegar"></button></p>
+                                    <p class="level-item reject"><button hidden id="Denegar" style="margin: 3px;"></button></p>
                                 </form>
                                 <form name="aceptar" action="./aceptarExperiencia">
                                     <input id="idExpOk" name="idExpOk" hidden value="" />
-                                    <p class="level-item accept"><button hidden id="Aceptar"></button></p>
+                                    <p class="level-item accept"><button hidden id="Aceptar" style="margin: 3px;" ></button></p>
                                 </form>
                             </div>
                         </nav>
