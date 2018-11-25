@@ -62,7 +62,7 @@
                         + "<div class='tile is-child box notification " + colores[(rs.getInt("tipoExperiencia") - 1)] + "'>"
                         + "<p class='title'>" + rs.getString("nombreAlumno") + "</p>"
                         + "<p class='subtitle'>" + rs.getString("fechaEnvio") + "</p>"
-                        + "<p>" + rs.getString("contenido") + "</p>"
+                        + "<p class='has-text-justified'>" + rs.getString("contenido") + "</p>"
                         + "</div>"
                         + "</div>");
                 i++;

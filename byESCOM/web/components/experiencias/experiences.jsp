@@ -33,7 +33,7 @@
             <div class="hero-body">
                 <div class="container">
                     <h1 class="title">
-                        Catalogo de Experiencias
+                        Catálogo de Experiencias
                     </h1>
                 </div>
             </div>

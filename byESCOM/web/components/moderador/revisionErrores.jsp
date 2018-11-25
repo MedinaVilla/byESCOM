@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="./fonts/css/all.css"> 
         <script src="./js/jquery.min.js"></script>
         <script src="./js/reporte.js"></script>
-        <title>Revision de Errores</title>
+        <title>Revisión de Errores</title>
     </head>
     <body>
         <%
@@ -32,7 +32,7 @@
             <div class="hero-body">
                 <div class="container">
                     <h1 class="title">
-                        Revision de errores
+                        Revisión de errores
                 </div>
             </div>
         </section>

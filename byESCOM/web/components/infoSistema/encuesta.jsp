@@ -36,7 +36,7 @@
             </div>
         </section>
         <br/>
-        <div class="box has-text-centered">Nos gustaría que nos brindara su opinión acerca de la plataforma para nosotros poder mejor para hacer cada vez mejores.</div>
+        <div class="box has-text-centered">Nos gustaría que nos brindara su opinión acerca de la plataforma para nosotros poder mejorarla y para nosotros ser cada vez mejores.</div>
         <div  id="success" name="success" class="success">
             <div hidden class="notification is-success has-text-centered">
                 Encuesta enviada correctamente. Gracias por participar.

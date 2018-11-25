@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="./fonts/css/all.css"> 
         <script src="./js/jquery.min.js"></script>
         <script src="./js/revisionExperiencia.js"></script>
-        <title>Revision Experiencias</title>
+        <title>Revisión Experiencias</title>
     </head>
     <body>
         <%
@@ -33,7 +33,7 @@
             <div class="hero-body">
                 <div class="container">
                     <h1 class="title">
-                        Revision de experiencias
+                        Revisión de experiencias
                 </div>
             </div>
         </section>

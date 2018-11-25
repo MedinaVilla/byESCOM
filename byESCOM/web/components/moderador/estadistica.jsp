@@ -22,7 +22,7 @@
         <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"/>
         <link rel="stylesheet" href="./css/bulma.css" type="text/css">
         <link rel="stylesheet" href="./fonts/css/all.css">
-        <title>Estadística</title>
+        <title>Estadísticas</title>
     </head>
     <%
         try {
@@ -38,7 +38,7 @@
             <div class="hero-body">
                 <div class="container">
                     <h1 class="title">
-                        Estadística
+                        Estadísticas
                 </div>
             </div>
         </section>
