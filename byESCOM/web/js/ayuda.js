@@ -63,6 +63,7 @@ function showModule(modulo){
         default:
             document.getElementById("titulo").innerHTML = "Seleccione un submódulo";
             allHidden();
+            document.getElementById("byESCOM").removeAttribute("hidden");
             break;
     }
     
