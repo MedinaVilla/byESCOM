@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="./css/bulma.css" type="text/css"/>
         <link rel="stylesheet" href="./fonts/css/all.css"/> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <title>Bievenido</title>
+        <title>Bienvenido</title>
     </head>
     <body>
         <!-- Constructor que imprime navbar -->
@@ -46,7 +46,7 @@
                         <div onClick="javascript: location.href = './materias';" class="hero is-primary hover-hero">
                             <div class="hero-body">
                                 <h2 class="title">Materias</h2>
-                                <p class="subtitle">Visualiza las materias en nuestra escuela y una descripción en la que aprenderás en ellas.</p>
+                                <p class="subtitle">Visualiza las materias de la carrera Ing. en Sistemas Computacionales y una descripción en la que aprenderás en ellas.</p>
                             </div>
                         </div>
                     </div>

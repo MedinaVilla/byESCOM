@@ -53,7 +53,7 @@
                 <div class="column is-three-quarters">
                     <span id="categoria" class="tag is-primary is-primary">Seleccione una categoría</span>
                     <div class="box">
-                        <p id="nombre" class="title"></p>
+                        <p id="nombre" class="title">Clubes</p>
                         <p id="profesor"></p>
                         <p id="ubicacion"></p>
                         <p id="horario"</p>

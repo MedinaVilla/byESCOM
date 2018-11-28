@@ -16,7 +16,7 @@
         <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"/>
         <link rel="stylesheet" href="./css/bulma.css" type="text/css">
         <link rel="stylesheet" href="./fonts/css/all.css"> 
-        <title>Hola!</title>
+        <title>¡Hola!</title>
     </head>
     <body>
         <div>
@@ -29,7 +29,7 @@
                 <div class="hero-body">
                     <div class="container">
                         <h1 class="title">
-                            Bienvenido moderador <%out.print(sesion.getAttribute("nombreUsuario").toString());
+                            ¡Bienvenido moderador <%out.print(sesion.getAttribute("nombreUsuario").toString()+"!");
                                 } catch (Exception e) {
                                     out.println(e.toString());
                                     response.sendRedirect("./login");
@@ -42,6 +42,5 @@
     <%
         footer footer = new footer();
         out.println(footer.showFooter());
-        System.out.println("haha");
     %>
 </html>

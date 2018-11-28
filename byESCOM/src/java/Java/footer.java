@@ -36,9 +36,9 @@ public class footer {
                 + "<div class='level-right'>"
                 + "<div class='container' style='padding-right:50px;'>"
                 + "<p class='level-item'><strong>Contáctanos</strong></p>"
-                + "<div class='level-item'>Celular: 5537241451 Ext. 75891 </div>"
-                + "<div class='level-item'>Pag. ESCOM: http://www.escom.ipn.mx/</div>"
-                + "<div class='level-item'>Pregúntanos: preguntaESCOM@gmail.com</div>"
+                + "<div class='level-item'>Teléfono: 01 55 5729 6000 </div>"
+                + "<div class='level-item'>Sitio web de ESCOM: http://www.escom.ipn.mx/</div>"
+                + "<div class='level-item'>Pregúntanos: pit.escom@gmail.com</div>"
                 + "</div>"
                 + "</div>"
                 + "</div>";

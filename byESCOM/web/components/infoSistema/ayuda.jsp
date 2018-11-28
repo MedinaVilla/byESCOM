@@ -82,7 +82,7 @@
                     <div class="box">
                         <div id="byESCOM" class="has-text-justified">
                             <div class="has-text-centered "><img src="./img/byESCOM.jpg" ></div>
-                            <p>byESCOM es una página web alternativa que informa a los alumnos del grupo 1CV1 durante el semestre 19-1 sobre la Escuela Superior de Cómputo, mejor conocida como ESCOM.</p><br>
+                            <p>byESCOM es una página web alternativa que informa a los alumnos del grupo 1CV1 durante el semestre 19-1 sobre la Escuela Superior de Cómputo, mejor conocida como ESCOM y de la carrera de Ing. en Sistemas Computacionales.</p><br>
                             <p>En esta página existen varios módulos que fungen de ayuda al alumnado para poder tener una visión más clara sobre que ofrece la ESCOM, ya sea por sus diferentes apartados que brindan información, como los apartados en donde los alumnos pueden platicar sobre sus propias experiencias en ella.</p>
                             <div class="has-text-centered "><img src="./img/ayuda/home.png"></div>
                         </div>

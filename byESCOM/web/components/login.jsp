@@ -42,7 +42,7 @@
                 <div class="hero-body">
                     <div class="container has-text-centered">
                         <div class="column is-4 is-offset-4">
-                            <h3 class="title has-text-grey">Iniciar Sesión</h3>
+                            <h3 class="title has-text-grey">Iniciar sesión</h3>
                             <div class="box">
                                 <figure class="avatar">
                                     <img src="./img/avatar.jpg" width='102' height='18'>
@@ -50,13 +50,13 @@
                                 <form name="login" action="./loguearse"  onsubmit="return validarLogin()">
                                     <div class="field">
                                         <div class="control">
-                                            <input name="nombreUsuario" class="input is-large" type="text" placeholder="Nombre de Usuario" autofocus="">
+                                            <input name="nombreUsuario" class="input is-large" type="text" placeholder="Nombre de usuario" autofocus="">
                                             <p id="nombreUsuErr" class="help is-danger"> </p>
                                         </div>
                                     </div>
                                     <div class="field">
                                         <div class="control">
-                                            <input name="password" class="input is-large" type="password" placeholder="Tu password">
+                                            <input name="password" class="input is-large" type="password" placeholder="Password">
                                             <p id="passwordErr" class="help is-danger"> </p>
                                             <p id="loginErr" class="help is-danger"> </p>
                                         </div>

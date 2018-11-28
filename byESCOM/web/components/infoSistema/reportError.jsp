@@ -38,7 +38,7 @@
         <div class="box has-text-centered">Nos gustaría que nos comunique errores que haya encontrado dentro de la plataforma para solucionarlo lo antes posible.</div>
         <div  id="success" name="success" class="success">
             <div hidden class="notification is-success has-text-centered">
-                Reporte enviado correctamente. Nos encargaremos de revisarlo y corregirlo lo antes posible :)
+                Reporte enviado correctamente. Nos encargaremos de revisarlo y corregirlo lo antes posible. :)
             </div>
         </div>
         <div  id="danger" name="danger" class="danger">

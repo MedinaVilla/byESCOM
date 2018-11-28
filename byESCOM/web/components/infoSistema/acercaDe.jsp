@@ -47,7 +47,7 @@
                                     </figure>
                                 </div>
                                 <div class="media-content">
-                                    <p class="title is-4">Jesus Medina</p>
+                                    <p class="title is-4">Jesús Medina</p>
                                     <p class="subtitle is-6">@MedinaVilla</p>
                                 </div>
                             </div>
@@ -70,7 +70,7 @@
                                     </figure>
                                 </div>
                                 <div class="media-content">
-                                    <p class="title is-4">Ruben Hdez.</p>
+                                    <p class="title is-4">Rubén Hdez.</p>
                                     <p class="subtitle is-6">@Ruben35</p>
                                 </div>
                             </div>

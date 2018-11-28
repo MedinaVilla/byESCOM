@@ -58,7 +58,8 @@
                     <span id="titulo" class="tag is-primary is-primary has-text-justified">Seleccione una materia</span>
                     <br/>
                     <div class="box">
-                        <p id="descripcion" class="has-text-justified">Descripción</p>
+                        <p id="title" class=" title has-text-justified">Descripción</p>
+                        <p id="descripcion" class="has-text-justified"></p>
                     </div>
                 </div>
             </div>

@@ -45,6 +45,8 @@
                             <li><a onclick="showCategoriaDetailsOA()">Oferta Académica</a></li>
                             <li><a onclick="showCategoriaDetailsU()">Ubicacion</a></li>
                             <li><a onclick="showCategoriaDetailsORG()">Plan de Estudios</a></li>
+                            <br/><br/><img src="./img/escudo.png" /> <br/>
+                            <!--<p class="is-size-7">Fuente: http://www.escom.ipn.mx/htmls/conocenos/historiaEscudo.php</p>-->
                         </ul>
                     </aside>
                 </div>
@@ -70,19 +72,24 @@
                         <p id="titulo4" class="title"></p>
                         <p class="has-text-justified" id="contenido4"></p><br/>
                         <div class="listaOA2" name="listaOA2" id="listaOA2" ><ul hidden>
-                                <li>Ejercicio libre de la profesión: Prestando de forma independiente sus servicios profesionales a los sectores público y privado. Constituyendo empresas formales que presten sus servicios computacionales a los diversos sectores</li>
-                                <li>Sector público: Participa automatizando procesos administrativos en entidades gubernamentales en todos sus niveles, así como desarrollando software especializado para satisfacer los requerimientos específicos de dependencias gubernamentales</li>
-                                <li>Sector privado: Se desempeñan como diseñadores y desarrolladores, líderes y administradores de proyectos computacionales, en empresas de transformación, servicios y comerciales, nacionales e internacionales</li>
-                                <li>Sector académico: Incorporándose a instituciones educativas de nivel medio superior y/o superior como docentes e investigadores. Incorporándose a centros de investigación nacionales e internacionales en sus planes de posgrado, participando en actividades tales como: desarrollo de nuevas tecnologías, divulgación del conocimiento y docencia</li>
+                                <li><strong>Ejercicio libre de la profesión:</strong> Prestando de forma independiente sus servicios profesionales a los sectores público y privado. Constituyendo empresas formales que presten sus servicios computacionales a los diversos sectores</li>
+                                <li><strong>Sector público:</strong> Participa automatizando procesos administrativos en entidades gubernamentales en todos sus niveles, así como desarrollando software especializado para satisfacer los requerimientos específicos de dependencias gubernamentales</li>
+                                <li><strong>Sector privado:</strong> Se desempeñan como diseñadores y desarrolladores, líderes y administradores de proyectos computacionales, en empresas de transformación, servicios y comerciales, nacionales e internacionales</li>
+                                <li><strong>Sector académico:</strong> Incorporándose a instituciones educativas de nivel medio superior y/o superior como docentes e investigadores. Incorporándose a centros de investigación nacionales e internacionales en sus planes de posgrado, participando en actividades tales como: desarrollo de nuevas tecnologías, divulgación del conocimiento y docencia</li>
                             </ul></div>
                         <p id="titulo5" class="title"></p>
                         <p class="has-text-justified" id="contenido5"></p><br/>
                         <div class="listaOA3" name="listaOA3" id="listaOA3" ><ul hidden>
-                                <li>Ejercicio libre de la profesión: Prestando de forma independiente sus servicios profesionales a los sectores público y privado. Constituyendo empresas formales que presten sus servicios computacionales a los diversos sectores</li>
-                                <li>Sector público: Participa automatizando procesos administrativos en entidades gubernamentales en todos sus niveles, así como desarrollando software especializado para satisfacer los requerimientos específicos de dependencias gubernamentales</li>
-                                <li>Sector privado: Se desempeñan como diseñadores y desarrolladores, líderes y administradores de proyectos computacionales, en empresas de transformación, servicios y comerciales, nacionales e internacionales</li>
-                                <li>Sector académico: Incorporándose a instituciones educativas de nivel medio superior y/o superior como docentes e investigadores. Incorporándose a centros de investigación nacionales e internacionales en sus planes de posgrado, participando en actividades tales como: desarrollo de nuevas tecnologías, divulgación del conocimiento y docencia</li>
-                            </ul></div>
+                                <li><strong>Proyecto de investigación</strong></li>
+                                <li><strong>Tesis</strong></li>
+                                <li><strong>Memoria de experiencia profesional</strong></li>
+                                <li><strong>Examen de conocimiento por áreas</strong></li>
+                                <li><strong>Créditos de posgrado</strong></li>
+                                <li><strong>Seminario de titulación</strong></li>
+                                <li><strong>Escolaridad</strong></li>
+                                <li><strong>Curricular</strong></li>
+                                <li><strong>Práctica profesional</strong></li>
+                                ´                            </ul></div>
                         <p class="has-text-justified" id="contenido6"></p>
                         <p id="fuente"> </p><br/>
                     </div>
